@@ -3,7 +3,7 @@ from nbclient import NotebookClient
 from nbformat import read
 
 # Path to your Jupyter notebook
-notebook_path = '/Reports/full_report.ipynb'
+notebook_path = 'Reports/full_report.ipynb'
 
 # Read and execute the notebook
 with open(notebook_path) as f:
