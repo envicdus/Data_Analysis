@@ -1,0 +1,19 @@
+color:
+  palette:
+    violet: "#7061a6"
+    light-violet: "#7061a6"
+    white: "#F5F5F5"
+    grey: "#6e6e73"
+  background: white
+  foreground: grey
+  primary: violet
+
+logo: 
+  medium: logo.png
+
+typography:
+  fonts:
+    - family: Jura
+      source: google
+  base: Jura
+  headings: Jura

@@ -1,0 +1,1426 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.40">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Full Analysis of Philippine Food prices from 2007 - 2025 – portfolio_website</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-fad5ab29a14bbe0a7a7d29177f3f13bb.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+<script src="https://unpkg.com/@jupyter-widgets/html-manager@*/dist/embed-amd.js" crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">portfolio_website</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <span class="nav-link">
+<span class="menu-text">N. V. Decio</span>
+    </span>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <span class="nav-link">
+<span class="menu-text">Portfolios.qmd</span>
+    </span>
+  </li>  
+  <li class="nav-item">
+    <span class="nav-link">
+<span class="menu-text">Trainings.qmd</span>
+    </span>
+  </li>  
+  <li class="nav-item">
+    <span class="nav-link">
+<span class="menu-text">Resume.qmd</span>
+    </span>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#aims" id="toc-aims" class="nav-link active" data-scroll-target="#aims">Aims:</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Full Analysis of Philippine Food prices from 2007 - 2025</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="aims" class="level2">
+<h2 class="anchored" data-anchor-id="aims">Aims:</h2>
+<pre><code>### 1. Compare average prices across different regions for the same food item and year.
+### 2. Examine how prices of a specific food item have changed over time within a region.
+### 3. Identify regional price variations for different food items.
+### 4. Predict future food prices based on historical data.</code></pre>
+<div id="cell-3" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> shapiro</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> kruskal</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.api <span class="im">as</span> sm</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scipy.stats <span class="im">as</span> stats</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> levene</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> ipywidgets <span class="im">import</span> interact</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> dash</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> dash <span class="im">import</span> dcc, html, Input, Output</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.graph_objects <span class="im">as</span> go</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scikit_posthocs <span class="im">as</span> sp</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> ipywidgets <span class="im">as</span> widgets</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> display</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pmdarima <span class="im">import</span> auto_arima</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> warnings</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-4" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#open the file that was already cleaned, analyzed, and saved.</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>file_path <span class="op">=</span> <span class="st">"../Data/Processed/eda_results.csv"</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(file_path)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="inspect-the-data" class="level4">
+<h4 class="anchored" data-anchor-id="inspect-the-data">Inspect the data</h4>
+<div id="cell-6" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># View the first few rows of the dataset</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df.head())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                                 Region Province Food_Items  year  mean  \
+0  Autonomous region in Muslim Mindanao  Basilan      beans  2007   NaN   
+1  Autonomous region in Muslim Mindanao  Basilan      beans  2008   NaN   
+2  Autonomous region in Muslim Mindanao  Basilan      beans  2009   NaN   
+3  Autonomous region in Muslim Mindanao  Basilan      beans  2010   NaN   
+4  Autonomous region in Muslim Mindanao  Basilan      beans  2011   NaN   
+
+   median  Mode  Variance  Standard Deviation  IQR  
+0     NaN   NaN       NaN                 NaN  NaN  
+1     NaN   NaN       NaN                 NaN  NaN  
+2     NaN   NaN       NaN                 NaN  NaN  
+3     NaN   NaN       NaN                 NaN  NaN  
+4     NaN   NaN       NaN                 NaN  NaN  </code></pre>
+</div>
+</div>
+<div id="cell-7" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># View the columns and data types of the dataset</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df.info())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 91200 entries, 0 to 91199
+Data columns (total 10 columns):
+ #   Column              Non-Null Count  Dtype  
+---  ------              --------------  -----  
+ 0   Region              91200 non-null  object 
+ 1   Province            91200 non-null  object 
+ 2   Food_Items          91200 non-null  object 
+ 3   year                91200 non-null  int64  
+ 4   mean                78875 non-null  float64
+ 5   median              78875 non-null  float64
+ 6   Mode                36432 non-null  float64
+ 7   Variance            76125 non-null  float64
+ 8   Standard Deviation  76125 non-null  float64
+ 9   IQR                 78875 non-null  float64
+dtypes: float64(6), int64(1), object(3)
+memory usage: 7.0+ MB
+None</code></pre>
+</div>
+</div>
+<div id="cell-8" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># View the summary statistics of the dataset though this may not make sense as they are already described in the EDA report</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df.describe())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>               year          mean        median          Mode      Variance  \
+count  91200.000000  78875.000000  78875.000000  36432.000000  76125.000000   
+mean    2016.000000    105.451058    104.863522     53.431795    122.240405   
+std        5.477256     78.042087     77.886750     36.845196    563.636799   
+min     2007.000000      3.913333      3.910000      4.000000      0.000000   
+25%     2011.000000     45.180000     44.880000     21.550000      2.445597   
+50%     2016.000000     83.240417     82.675000     50.880000     11.208699   
+75%     2021.000000    157.035417    156.402500     82.030000     60.107766   
+max     2025.000000    472.291667    470.625000    220.310000  24723.623884   
+
+       Standard Deviation           IQR  
+count        76125.000000  78875.000000  
+mean             6.382062      7.540924  
+std              9.028331     10.880566  
+min              0.000000      0.000000  
+25%              1.563840      1.665000  
+50%              3.347940      3.950000  
+75%              7.752920      9.345000  
+max            157.237476    229.622500  </code></pre>
+</div>
+</div>
+<div id="cell-9" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">#check the shape of the dataset</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df.shape)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>(91200, 10)</code></pre>
+</div>
+</div>
+<div id="cell-10" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># get the first and last readings for each food item</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df[<span class="st">'year'</span>].agg([<span class="st">'min'</span>, <span class="st">'max'</span>]))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>min    2007
+max    2025
+Name: year, dtype: int64</code></pre>
+</div>
+</div>
+<p>For comparing average prices across regions for the same food item and year, the closing price is generally the best price to use. Here’s why:</p>
+<ol type="1">
+<li>Consistency: The closing price is considered the most representative of the market’s consensus for that period. It accounts for the entire trading session and reflects both supply and demand dynamics over time.</li>
+<li>Standard Usage: The closing price is the most widely used price in financial markets, meaning data and analysis are typically focused around this price.</li>
+<li>Simplicity: It eliminates the noise created by intra-day fluctuations, focusing on the price at the end of the trading session, which is more relevant for long-term comparisons.</li>
+</ol>
+<div id="cell-12" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter the dataframe to keep only rows where 'food_item' starts with 'c_'</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>df_filtered <span class="op">=</span> df[df[<span class="st">'Food_Items'</span>].<span class="bu">str</span>.startswith(<span class="st">'c_'</span>)]</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_filtered)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                                     Region         Province  Food_Items  \
+19     Autonomous region in Muslim Mindanao          Basilan     c_beans   
+20     Autonomous region in Muslim Mindanao          Basilan     c_beans   
+21     Autonomous region in Muslim Mindanao          Basilan     c_beans   
+22     Autonomous region in Muslim Mindanao          Basilan     c_beans   
+23     Autonomous region in Muslim Mindanao          Basilan     c_beans   
+...                                     ...              ...         ...   
+90302                           Region XIII  Surigao del Sur  c_tomatoes   
+90303                           Region XIII  Surigao del Sur  c_tomatoes   
+90304                           Region XIII  Surigao del Sur  c_tomatoes   
+90305                           Region XIII  Surigao del Sur  c_tomatoes   
+90306                           Region XIII  Surigao del Sur  c_tomatoes   
+
+       year       mean  median  Mode   Variance  Standard Deviation     IQR  
+19     2007  74.937500  74.850   NaN   0.414093            0.643501  1.1250  
+20     2008  73.472500  73.445   NaN   2.735784            1.654021  3.3500  
+21     2009  73.852500  73.690   NaN   1.378330            1.174023  2.1300  
+22     2010  74.190000  73.865   NaN   0.903018            0.950273  1.2125  
+23     2011  76.970000  76.740   NaN   0.445182            0.667219  0.6225  
+...     ...        ...     ...   ...        ...                 ...     ...  
+90302  2021  58.730000  60.485   NaN  53.710496            7.328744  6.6175  
+90303  2022  68.305833  69.285   NaN  37.754260            6.144450  6.4875  
+90304  2023  74.167500  77.150   NaN  73.676307            8.583490  9.0825  
+90305  2024  72.177083  71.815   NaN  45.560326            6.749839  8.5200  
+90306  2025  79.225000  79.225   NaN   1.531250            1.237437  0.8750  
+
+[18240 rows x 10 columns]</code></pre>
+</div>
+</div>
+<div id="cell-13" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Due to having 18 regions in the Philippines, instead of creating a graph for each region, we will create a graph for each food item</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="co"># and make an interactive plot with a dropdown to select the food item.</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize the Dash app</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>app <span class="op">=</span> dash.Dash(<span class="va">__name__</span>)</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Dropdown options for food items, removing c_ prefix</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>food_item_options <span class="op">=</span> [{<span class="st">'label'</span>: item.replace(<span class="st">'c_'</span>, <span class="st">''</span>), <span class="st">'value'</span>: item} <span class="cf">for</span> item <span class="kw">in</span> df_filtered[<span class="st">'Food_Items'</span>].unique()]</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Dropdown options for mean/median</span></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>mean_median_options <span class="op">=</span> [</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>    {<span class="st">'label'</span>: <span class="st">'mean'</span>, <span class="st">'value'</span>: <span class="st">'mean'</span>},</span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>    {<span class="st">'label'</span>: <span class="st">'median'</span>, <span class="st">'value'</span>: <span class="st">'median'</span>}</span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a><span class="co"># App layout</span></span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>app.layout <span class="op">=</span> html.Div([</span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a>    html.H1(<span class="st">"Region-wise Food Data Visualization"</span>),</span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Dropdown for selecting food item</span></span>
+<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a>    dcc.Dropdown(</span>
+<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a>        <span class="bu">id</span><span class="op">=</span><span class="st">'food_item_dropdown'</span>,</span>
+<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a>        options<span class="op">=</span>food_item_options,</span>
+<span id="cb16-24"><a href="#cb16-24" aria-hidden="true" tabindex="-1"></a>        value<span class="op">=</span><span class="st">'Apples'</span>,  <span class="co"># Default food item</span></span>
+<span id="cb16-25"><a href="#cb16-25" aria-hidden="true" tabindex="-1"></a>        style<span class="op">=</span>{<span class="st">'width'</span>: <span class="st">'50%'</span>}</span>
+<span id="cb16-26"><a href="#cb16-26" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb16-27"><a href="#cb16-27" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb16-28"><a href="#cb16-28" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Dropdown for selecting mean or median</span></span>
+<span id="cb16-29"><a href="#cb16-29" aria-hidden="true" tabindex="-1"></a>    dcc.Dropdown(</span>
+<span id="cb16-30"><a href="#cb16-30" aria-hidden="true" tabindex="-1"></a>        <span class="bu">id</span><span class="op">=</span><span class="st">'mean_median_dropdown'</span>,</span>
+<span id="cb16-31"><a href="#cb16-31" aria-hidden="true" tabindex="-1"></a>        options<span class="op">=</span>mean_median_options,</span>
+<span id="cb16-32"><a href="#cb16-32" aria-hidden="true" tabindex="-1"></a>        value<span class="op">=</span><span class="st">'mean'</span>,  <span class="co"># Default selection is 'mean'</span></span>
+<span id="cb16-33"><a href="#cb16-33" aria-hidden="true" tabindex="-1"></a>        style<span class="op">=</span>{<span class="st">'width'</span>: <span class="st">'50%'</span>}</span>
+<span id="cb16-34"><a href="#cb16-34" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb16-35"><a href="#cb16-35" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb16-36"><a href="#cb16-36" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Graph to display the data</span></span>
+<span id="cb16-37"><a href="#cb16-37" aria-hidden="true" tabindex="-1"></a>    dcc.Graph(<span class="bu">id</span><span class="op">=</span><span class="st">'region_graph'</span>)</span>
+<span id="cb16-38"><a href="#cb16-38" aria-hidden="true" tabindex="-1"></a>])</span>
+<span id="cb16-39"><a href="#cb16-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-40"><a href="#cb16-40" aria-hidden="true" tabindex="-1"></a><span class="co"># Callback to update the graph based on selected food item and mean/median</span></span>
+<span id="cb16-41"><a href="#cb16-41" aria-hidden="true" tabindex="-1"></a><span class="at">@app.callback</span>(</span>
+<span id="cb16-42"><a href="#cb16-42" aria-hidden="true" tabindex="-1"></a>    dash.dependencies.Output(<span class="st">'region_graph'</span>, <span class="st">'figure'</span>),</span>
+<span id="cb16-43"><a href="#cb16-43" aria-hidden="true" tabindex="-1"></a>    [</span>
+<span id="cb16-44"><a href="#cb16-44" aria-hidden="true" tabindex="-1"></a>        dash.dependencies.Input(<span class="st">'food_item_dropdown'</span>, <span class="st">'value'</span>),</span>
+<span id="cb16-45"><a href="#cb16-45" aria-hidden="true" tabindex="-1"></a>        dash.dependencies.Input(<span class="st">'mean_median_dropdown'</span>, <span class="st">'value'</span>)</span>
+<span id="cb16-46"><a href="#cb16-46" aria-hidden="true" tabindex="-1"></a>    ]</span>
+<span id="cb16-47"><a href="#cb16-47" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb16-48"><a href="#cb16-48" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> update_graph(selected_food_item, selected_stat):</span>
+<span id="cb16-49"><a href="#cb16-49" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Handle the case where selected_food_item is None</span></span>
+<span id="cb16-50"><a href="#cb16-50" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> selected_food_item:</span>
+<span id="cb16-51"><a href="#cb16-51" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> px.line(title<span class="op">=</span><span class="st">"No food item selected"</span>)</span>
+<span id="cb16-52"><a href="#cb16-52" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb16-53"><a href="#cb16-53" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Filter the data based on the selected food item</span></span>
+<span id="cb16-54"><a href="#cb16-54" aria-hidden="true" tabindex="-1"></a>    filtered_df <span class="op">=</span> df_filtered[df_filtered[<span class="st">'Food_Items'</span>] <span class="op">==</span> selected_food_item]</span>
+<span id="cb16-55"><a href="#cb16-55" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb16-56"><a href="#cb16-56" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Remove the 'c_' prefix for display purposes in the title</span></span>
+<span id="cb16-57"><a href="#cb16-57" aria-hidden="true" tabindex="-1"></a>    display_food_item <span class="op">=</span> selected_food_item.replace(<span class="st">'c_'</span>, <span class="st">''</span>)</span>
+<span id="cb16-58"><a href="#cb16-58" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb16-59"><a href="#cb16-59" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Find the first and last year in the filtered dataset</span></span>
+<span id="cb16-60"><a href="#cb16-60" aria-hidden="true" tabindex="-1"></a>    first_year <span class="op">=</span> filtered_df[<span class="st">'year'</span>].<span class="bu">min</span>()</span>
+<span id="cb16-61"><a href="#cb16-61" aria-hidden="true" tabindex="-1"></a>    last_year <span class="op">=</span> filtered_df[<span class="st">'year'</span>].<span class="bu">max</span>()</span>
+<span id="cb16-62"><a href="#cb16-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-63"><a href="#cb16-63" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create a plot based on the selected statistic (mean or median)</span></span>
+<span id="cb16-64"><a href="#cb16-64" aria-hidden="true" tabindex="-1"></a>    fig <span class="op">=</span> px.line(</span>
+<span id="cb16-65"><a href="#cb16-65" aria-hidden="true" tabindex="-1"></a>        filtered_df, </span>
+<span id="cb16-66"><a href="#cb16-66" aria-hidden="true" tabindex="-1"></a>        x<span class="op">=</span><span class="st">'year'</span>, </span>
+<span id="cb16-67"><a href="#cb16-67" aria-hidden="true" tabindex="-1"></a>        y<span class="op">=</span>selected_stat, </span>
+<span id="cb16-68"><a href="#cb16-68" aria-hidden="true" tabindex="-1"></a>        color<span class="op">=</span><span class="st">'Region'</span>, </span>
+<span id="cb16-69"><a href="#cb16-69" aria-hidden="true" tabindex="-1"></a>        title<span class="op">=</span><span class="ss">f'</span><span class="sc">{</span>selected_stat<span class="sc">.</span>capitalize()<span class="sc">}</span><span class="ss"> for </span><span class="sc">{</span>display_food_item<span class="sc">}</span><span class="ss"> by Region and Year'</span>,</span>
+<span id="cb16-70"><a href="#cb16-70" aria-hidden="true" tabindex="-1"></a>        labels<span class="op">=</span>{selected_stat: selected_stat.capitalize(), <span class="st">'year'</span>: <span class="st">'Year'</span>, <span class="st">'Region'</span>: <span class="st">'Region'</span>}</span>
+<span id="cb16-71"><a href="#cb16-71" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb16-72"><a href="#cb16-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-73"><a href="#cb16-73" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Extend the x-axis to include the last year</span></span>
+<span id="cb16-74"><a href="#cb16-74" aria-hidden="true" tabindex="-1"></a>    fig.update_xaxes(</span>
+<span id="cb16-75"><a href="#cb16-75" aria-hidden="true" tabindex="-1"></a>        tickmode<span class="op">=</span><span class="st">'linear'</span>,  <span class="co"># Ensure all years are shown on the x-axis</span></span>
+<span id="cb16-76"><a href="#cb16-76" aria-hidden="true" tabindex="-1"></a>        tick0<span class="op">=</span>first_year,   <span class="co"># Start from the first year</span></span>
+<span id="cb16-77"><a href="#cb16-77" aria-hidden="true" tabindex="-1"></a>        dtick<span class="op">=</span><span class="dv">1</span>,            <span class="co"># Increment by 1 year</span></span>
+<span id="cb16-78"><a href="#cb16-78" aria-hidden="true" tabindex="-1"></a>        <span class="bu">range</span><span class="op">=</span>[first_year, last_year <span class="op">+</span> <span class="dv">1</span>]  <span class="co"># Extend the range to include the last year</span></span>
+<span id="cb16-79"><a href="#cb16-79" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb16-80"><a href="#cb16-80" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb16-81"><a href="#cb16-81" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> fig</span>
+<span id="cb16-82"><a href="#cb16-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-83"><a href="#cb16-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-84"><a href="#cb16-84" aria-hidden="true" tabindex="-1"></a><span class="co"># Run the app</span></span>
+<span id="cb16-85"><a href="#cb16-85" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">'__main__'</span>:</span>
+<span id="cb16-86"><a href="#cb16-86" aria-hidden="true" tabindex="-1"></a>    app.run_server(debug<span class="op">=</span><span class="va">True</span>, port<span class="op">=</span><span class="dv">8050</span>, mode<span class="op">=</span><span class="st">'inline'</span>, name<span class="op">=</span><span class="st">"app"</span>)</span>
+<span id="cb16-87"><a href="#cb16-87" aria-hidden="true" tabindex="-1"></a><span class="co"># Run the Dash apps with unique URLs</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+
+        <iframe width="100%" height="650" src="http://127.0.0.1:8050/" frameborder="0" allowfullscreen=""></iframe>
+        
+</div>
+</div>
+<p>The graph shows the mean (average) price or median price of different food items over time for different regions in the Philippines. #### Key Observation 1. Trend - Generally, the price of all food items has been increasing over the years across most regions. There are some fluctuations and periods of stability for some items, but the overall trend is upward. 2. Regional Differences - There is significant variation in price of different food items across regions. Some regions consistently have higher prices than others. Price fluctuations also varies between regions. Some regions experience more volatile prices than others.</p>
+<p>Factors like weather patterns, government policies, agriculture changes, food transportation and global market trends can influence these prices.</p>
+<p>To know which regions has the highest and lowest price every year for every food item, max, min will be calculated. Then range is next to know how wide the difference between the highest and lowest price.</p>
+<div id="cell-16" class="cell" data-execution_count="24">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>file_path <span class="op">=</span> <span class="st">"../Data/Interim/cleaned_food_prices.csv"</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>df_range <span class="op">=</span> pd.read_csv(file_path)</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="co">#dropping columns related to food price index</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>df_nofpi_range <span class="op">=</span> df_range.drop(columns<span class="op">=</span>[<span class="st">'o_food_price_index'</span>, <span class="st">'h_food_price_index'</span>, <span class="st">'l_food_price_index'</span>, <span class="st">'c_food_price_index'</span>, <span class="st">'inflation_food_price_index'</span>, <span class="st">'trust_food_price_index'</span>])</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert 'Date' column to datetime format</span></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>df_nofpi_range[<span class="st">'Date'</span>] <span class="op">=</span> pd.to_datetime(df_nofpi_range[<span class="st">'Date'</span>])</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a><span class="co">#dropping columns related to inflation</span></span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>df_noinf_range <span class="op">=</span> df_nofpi_range.drop(columns<span class="op">=</span>[<span class="st">'inflation_beans'</span>,<span class="st">'inflation_cabbage'</span>, <span class="st">'inflation_carrots'</span>, <span class="st">'inflation_eggs'</span>, <span class="st">'inflation_garlic'</span>, <span class="st">'inflation_meat_beef_chops'</span>, <span class="st">'inflation_meat_chicken_whole'</span>, <span class="st">'inflation_meat_pork'</span>, <span class="st">'inflation_onions'</span>, <span class="st">'inflation_potatoes'</span>, <span class="st">'inflation_rice'</span>, <span class="st">'inflation_tomatoes'</span>])</span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a><span class="co">#dropping columns related to trust scores</span></span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>df_cleaned_range <span class="op">=</span> df_noinf_range.drop(columns<span class="op">=</span>[<span class="st">'trust_beans'</span>,<span class="st">'trust_cabbage'</span>, <span class="st">'trust_carrots'</span>, <span class="st">'trust_eggs'</span>, <span class="st">'trust_garlic'</span>, <span class="st">'trust_meat_beef_chops'</span>, <span class="st">'trust_meat_chicken_whole'</span>, <span class="st">'trust_meat_pork'</span>, <span class="st">'trust_onions'</span>, <span class="st">'trust_potatoes'</span>, <span class="st">'trust_rice'</span>, <span class="st">'trust_tomatoes'</span>])</span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a><span class="co">#dropping uneeded columns</span></span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a>df_unneeded_range <span class="op">=</span> df_cleaned_range.drop(columns<span class="op">=</span>[<span class="st">'country'</span>, <span class="st">'City'</span>, <span class="st">'lat'</span>, <span class="st">'lon'</span>, <span class="st">'Province'</span>, <span class="st">'Date'</span>, <span class="st">'month'</span>])</span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Reshaping from wide to long format (including year and month as part of the identifier)</span></span>
+<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a>df_range <span class="op">=</span> df_unneeded_range.melt(id_vars<span class="op">=</span>[<span class="st">'Region'</span>, <span class="st">'year'</span>], var_name<span class="op">=</span><span class="st">'Food_Items'</span>, value_name<span class="op">=</span><span class="st">'Price'</span>)</span>
+<span id="cb17-21"><a href="#cb17-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-22"><a href="#cb17-22" aria-hidden="true" tabindex="-1"></a>df_range_filtered <span class="op">=</span> df_range[df_range[<span class="st">'Food_Items'</span>].<span class="bu">str</span>.startswith(<span class="st">'c_'</span>)]</span>
+<span id="cb17-23"><a href="#cb17-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-24"><a href="#cb17-24" aria-hidden="true" tabindex="-1"></a>df_range_filtered.loc[:, <span class="st">'Food_Items'</span>] <span class="op">=</span> df_range_filtered[<span class="st">'Food_Items'</span>].<span class="bu">str</span>.replace(<span class="st">'c_'</span>, <span class="st">''</span>, regex<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb17-25"><a href="#cb17-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-26"><a href="#cb17-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_range_filtered)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                                   Region  year Food_Items  Price
+354795   Cordillera Administrative region  2007      beans  84.71
+354796   Cordillera Administrative region  2007      beans  84.03
+354797   Cordillera Administrative region  2007      beans  83.63
+354798   Cordillera Administrative region  2007      beans  83.91
+354799   Cordillera Administrative region  2007      beans  83.76
+...                                   ...   ...        ...    ...
+1419175                    Market Average  2024   tomatoes  83.80
+1419176                    Market Average  2024   tomatoes  83.34
+1419177                    Market Average  2024   tomatoes  87.72
+1419178                    Market Average  2024   tomatoes  79.34
+1419179                    Market Average  2025   tomatoes  78.71
+
+[283836 rows x 4 columns]</code></pre>
+</div>
+</div>
+<div id="cell-17" class="cell" data-execution_count="25">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Dash app setup</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>apph <span class="op">=</span> dash.Dash(<span class="va">__name__</span>)</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>apph.layout <span class="op">=</span> html.Div([</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>    html.H3(<span class="st">"Highest Prices Per Year by Region"</span>),</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Dropdown for selecting food items</span></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>    dcc.Dropdown(</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>        <span class="bu">id</span><span class="op">=</span><span class="st">'food-item-dropdown'</span>,</span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>        options<span class="op">=</span>[{<span class="st">'label'</span>: item, <span class="st">'value'</span>: item} <span class="cf">for</span> item <span class="kw">in</span> df_range_filtered[<span class="st">'Food_Items'</span>].unique()],</span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>        value<span class="op">=</span>df_range_filtered[<span class="st">'Food_Items'</span>].unique()[<span class="dv">0</span>],</span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>        placeholder<span class="op">=</span><span class="st">"Select a food item"</span></span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Graph for displaying highest prices</span></span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>    dcc.Graph(<span class="bu">id</span><span class="op">=</span><span class="st">'highest-price-graph'</span>)</span>
+<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a>])</span>
+<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Callback to update the graph based on selected food item</span></span>
+<span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a><span class="at">@apph.callback</span>(</span>
+<span id="cb19-21"><a href="#cb19-21" aria-hidden="true" tabindex="-1"></a>    Output(<span class="st">'highest-price-graph'</span>, <span class="st">'figure'</span>),</span>
+<span id="cb19-22"><a href="#cb19-22" aria-hidden="true" tabindex="-1"></a>    [Input(<span class="st">'food-item-dropdown'</span>, <span class="st">'value'</span>)]</span>
+<span id="cb19-23"><a href="#cb19-23" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb19-24"><a href="#cb19-24" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> update_graph(selected_food_item):</span>
+<span id="cb19-25"><a href="#cb19-25" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Filter data for the selected food item</span></span>
+<span id="cb19-26"><a href="#cb19-26" aria-hidden="true" tabindex="-1"></a>    filtered_dfr <span class="op">=</span> df_range_filtered[df_range_filtered[<span class="st">'Food_Items'</span>] <span class="op">==</span> selected_food_item]</span>
+<span id="cb19-27"><a href="#cb19-27" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb19-28"><a href="#cb19-28" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Find the highest price per year and the corresponding region</span></span>
+<span id="cb19-29"><a href="#cb19-29" aria-hidden="true" tabindex="-1"></a>    highest_prices <span class="op">=</span> (</span>
+<span id="cb19-30"><a href="#cb19-30" aria-hidden="true" tabindex="-1"></a>        filtered_dfr.loc[filtered_dfr.groupby(<span class="st">'year'</span>)[<span class="st">'Price'</span>].idxmax()]</span>
+<span id="cb19-31"><a href="#cb19-31" aria-hidden="true" tabindex="-1"></a>        .reset_index(drop<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb19-32"><a href="#cb19-32" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb19-33"><a href="#cb19-33" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb19-34"><a href="#cb19-34" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create the bar chart</span></span>
+<span id="cb19-35"><a href="#cb19-35" aria-hidden="true" tabindex="-1"></a>    fig <span class="op">=</span> px.bar(</span>
+<span id="cb19-36"><a href="#cb19-36" aria-hidden="true" tabindex="-1"></a>        highest_prices,</span>
+<span id="cb19-37"><a href="#cb19-37" aria-hidden="true" tabindex="-1"></a>        x<span class="op">=</span><span class="st">'year'</span>,</span>
+<span id="cb19-38"><a href="#cb19-38" aria-hidden="true" tabindex="-1"></a>        y<span class="op">=</span><span class="st">'Price'</span>,</span>
+<span id="cb19-39"><a href="#cb19-39" aria-hidden="true" tabindex="-1"></a>        color<span class="op">=</span><span class="st">'Region'</span>,  <span class="co"># Highlight the region in the bar color</span></span>
+<span id="cb19-40"><a href="#cb19-40" aria-hidden="true" tabindex="-1"></a>        title<span class="op">=</span><span class="ss">f'Highest Prices Per Year for </span><span class="sc">{</span>selected_food_item<span class="sc">}</span><span class="ss">'</span>,</span>
+<span id="cb19-41"><a href="#cb19-41" aria-hidden="true" tabindex="-1"></a>        labels<span class="op">=</span>{<span class="st">'Price'</span>: <span class="st">'Price'</span>, <span class="st">'year'</span>: <span class="st">'year'</span>, <span class="st">'Region'</span>: <span class="st">'Region'</span>}</span>
+<span id="cb19-42"><a href="#cb19-42" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb19-43"><a href="#cb19-43" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb19-44"><a href="#cb19-44" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> fig</span>
+<span id="cb19-45"><a href="#cb19-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-46"><a href="#cb19-46" aria-hidden="true" tabindex="-1"></a><span class="co"># Run the app</span></span>
+<span id="cb19-47"><a href="#cb19-47" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">'__main__'</span>:</span>
+<span id="cb19-48"><a href="#cb19-48" aria-hidden="true" tabindex="-1"></a>    apph.run_server(debug<span class="op">=</span><span class="va">True</span>, port<span class="op">=</span><span class="dv">8051</span>, mode<span class="op">=</span><span class="st">'inline'</span>, name<span class="op">=</span><span class="st">"apph"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+
+        <iframe width="100%" height="650" src="http://127.0.0.1:8051/" frameborder="0" allowfullscreen=""></iframe>
+        
+</div>
+</div>
+<div id="cell-18" class="cell" data-execution_count="26">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Dash app setup</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>appl <span class="op">=</span> dash.Dash(<span class="va">__name__</span>)</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>appl.layout <span class="op">=</span> html.Div([</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>    html.H3(<span class="st">"lowest Prices Per Year by Region"</span>),</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Dropdown for selecting food items</span></span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>    dcc.Dropdown(</span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>        <span class="bu">id</span><span class="op">=</span><span class="st">'food-item-dropdown'</span>,</span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>        options<span class="op">=</span>[{<span class="st">'label'</span>: item, <span class="st">'value'</span>: item} <span class="cf">for</span> item <span class="kw">in</span> df_range_filtered[<span class="st">'Food_Items'</span>].unique()],</span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>        value<span class="op">=</span>df_range_filtered[<span class="st">'Food_Items'</span>].unique()[<span class="dv">0</span>],</span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a>        placeholder<span class="op">=</span><span class="st">"Select a food item"</span></span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb20-15"><a href="#cb20-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Graph for displaying lowest prices</span></span>
+<span id="cb20-16"><a href="#cb20-16" aria-hidden="true" tabindex="-1"></a>    dcc.Graph(<span class="bu">id</span><span class="op">=</span><span class="st">'lowest-price-graph'</span>)</span>
+<span id="cb20-17"><a href="#cb20-17" aria-hidden="true" tabindex="-1"></a>])</span>
+<span id="cb20-18"><a href="#cb20-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-19"><a href="#cb20-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Callback to update the graph based on selected food item</span></span>
+<span id="cb20-20"><a href="#cb20-20" aria-hidden="true" tabindex="-1"></a><span class="at">@appl.callback</span>(</span>
+<span id="cb20-21"><a href="#cb20-21" aria-hidden="true" tabindex="-1"></a>    Output(<span class="st">'lowest-price-graph'</span>, <span class="st">'figure'</span>),</span>
+<span id="cb20-22"><a href="#cb20-22" aria-hidden="true" tabindex="-1"></a>    [Input(<span class="st">'food-item-dropdown'</span>, <span class="st">'value'</span>)]</span>
+<span id="cb20-23"><a href="#cb20-23" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb20-24"><a href="#cb20-24" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> update_graph(selected_food_item):</span>
+<span id="cb20-25"><a href="#cb20-25" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Filter data for the selected food item</span></span>
+<span id="cb20-26"><a href="#cb20-26" aria-hidden="true" tabindex="-1"></a>    filtered_dfr <span class="op">=</span> df_range_filtered[df_range_filtered[<span class="st">'Food_Items'</span>] <span class="op">==</span> selected_food_item]</span>
+<span id="cb20-27"><a href="#cb20-27" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb20-28"><a href="#cb20-28" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Find the lowest price per year and the corresponding region</span></span>
+<span id="cb20-29"><a href="#cb20-29" aria-hidden="true" tabindex="-1"></a>    lowest_prices <span class="op">=</span> (</span>
+<span id="cb20-30"><a href="#cb20-30" aria-hidden="true" tabindex="-1"></a>        filtered_dfr.loc[filtered_dfr.groupby(<span class="st">'year'</span>)[<span class="st">'Price'</span>].idxmin()]</span>
+<span id="cb20-31"><a href="#cb20-31" aria-hidden="true" tabindex="-1"></a>        .reset_index(drop<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb20-32"><a href="#cb20-32" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb20-33"><a href="#cb20-33" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb20-34"><a href="#cb20-34" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create the bar chart</span></span>
+<span id="cb20-35"><a href="#cb20-35" aria-hidden="true" tabindex="-1"></a>    fig <span class="op">=</span> px.bar(</span>
+<span id="cb20-36"><a href="#cb20-36" aria-hidden="true" tabindex="-1"></a>        lowest_prices,</span>
+<span id="cb20-37"><a href="#cb20-37" aria-hidden="true" tabindex="-1"></a>        x<span class="op">=</span><span class="st">'year'</span>,</span>
+<span id="cb20-38"><a href="#cb20-38" aria-hidden="true" tabindex="-1"></a>        y<span class="op">=</span><span class="st">'Price'</span>,</span>
+<span id="cb20-39"><a href="#cb20-39" aria-hidden="true" tabindex="-1"></a>        color<span class="op">=</span><span class="st">'Region'</span>,  <span class="co"># Highlight the region in the bar color</span></span>
+<span id="cb20-40"><a href="#cb20-40" aria-hidden="true" tabindex="-1"></a>        title<span class="op">=</span><span class="ss">f'Lowest Prices Per Year for </span><span class="sc">{</span>selected_food_item<span class="sc">}</span><span class="ss">'</span>,</span>
+<span id="cb20-41"><a href="#cb20-41" aria-hidden="true" tabindex="-1"></a>        labels<span class="op">=</span>{<span class="st">'Price'</span>: <span class="st">'Price'</span>, <span class="st">'year'</span>: <span class="st">'year'</span>, <span class="st">'Region'</span>: <span class="st">'Region'</span>}</span>
+<span id="cb20-42"><a href="#cb20-42" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb20-43"><a href="#cb20-43" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb20-44"><a href="#cb20-44" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> fig</span>
+<span id="cb20-45"><a href="#cb20-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-46"><a href="#cb20-46" aria-hidden="true" tabindex="-1"></a><span class="co"># Run the app, changing port to make it have different URL and not interfere with other app</span></span>
+<span id="cb20-47"><a href="#cb20-47" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">'__main__'</span>:</span>
+<span id="cb20-48"><a href="#cb20-48" aria-hidden="true" tabindex="-1"></a>    appl.run_server(debug<span class="op">=</span><span class="va">True</span>, port<span class="op">=</span><span class="dv">8052</span>, mode<span class="op">=</span><span class="st">'inline'</span>, name<span class="op">=</span><span class="st">"appl"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+
+        <iframe width="100%" height="650" src="http://127.0.0.1:8052/" frameborder="0" allowfullscreen=""></iframe>
+        
+</div>
+</div>
+<div id="cell-19" class="cell" data-execution_count="27">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Dash App Setup</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>apprange <span class="op">=</span> dash.Dash(<span class="va">__name__</span>)</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>apprange.layout <span class="op">=</span> html.Div([</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>    html.H3(<span class="st">"Price Range of Food Items per Year Across Regions"</span>),</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Dropdown for selecting food items</span></span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>    dcc.Dropdown(</span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>        <span class="bu">id</span><span class="op">=</span><span class="st">'food-item-dropdown'</span>,</span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>        options<span class="op">=</span>[{<span class="st">'label'</span>: item, <span class="st">'value'</span>: item} <span class="cf">for</span> item <span class="kw">in</span> df_range_filtered[<span class="st">'Food_Items'</span>].unique()],</span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>        value<span class="op">=</span>df_range_filtered[<span class="st">'Food_Items'</span>].unique()[<span class="dv">0</span>],</span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>        placeholder<span class="op">=</span><span class="st">"Select a food item"</span></span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Graph for displaying the price range (min and max) per year</span></span>
+<span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a>    dcc.Graph(<span class="bu">id</span><span class="op">=</span><span class="st">'price-range-graph'</span>)</span>
+<span id="cb21-17"><a href="#cb21-17" aria-hidden="true" tabindex="-1"></a>])</span>
+<span id="cb21-18"><a href="#cb21-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-19"><a href="#cb21-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Callback to update the graph based on selected food item</span></span>
+<span id="cb21-20"><a href="#cb21-20" aria-hidden="true" tabindex="-1"></a><span class="at">@apprange.callback</span>(</span>
+<span id="cb21-21"><a href="#cb21-21" aria-hidden="true" tabindex="-1"></a>    Output(<span class="st">'price-range-graph'</span>, <span class="st">'figure'</span>),</span>
+<span id="cb21-22"><a href="#cb21-22" aria-hidden="true" tabindex="-1"></a>    [Input(<span class="st">'food-item-dropdown'</span>, <span class="st">'value'</span>)]</span>
+<span id="cb21-23"><a href="#cb21-23" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb21-24"><a href="#cb21-24" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> update_graph(selected_food_item):</span>
+<span id="cb21-25"><a href="#cb21-25" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Filter data for the selected food item</span></span>
+<span id="cb21-26"><a href="#cb21-26" aria-hidden="true" tabindex="-1"></a>    filtered_df <span class="op">=</span> df_range_filtered[df_range_filtered[<span class="st">'Food_Items'</span>] <span class="op">==</span> selected_food_item]</span>
+<span id="cb21-27"><a href="#cb21-27" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb21-28"><a href="#cb21-28" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Get the minimum and maximum price per year</span></span>
+<span id="cb21-29"><a href="#cb21-29" aria-hidden="true" tabindex="-1"></a>    price_range <span class="op">=</span> (</span>
+<span id="cb21-30"><a href="#cb21-30" aria-hidden="true" tabindex="-1"></a>        filtered_df.groupby(<span class="st">'year'</span>)[<span class="st">'Price'</span>]</span>
+<span id="cb21-31"><a href="#cb21-31" aria-hidden="true" tabindex="-1"></a>        .agg([<span class="st">'min'</span>, <span class="st">'max'</span>])</span>
+<span id="cb21-32"><a href="#cb21-32" aria-hidden="true" tabindex="-1"></a>        .reset_index()</span>
+<span id="cb21-33"><a href="#cb21-33" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb21-34"><a href="#cb21-34" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb21-35"><a href="#cb21-35" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create the graph (min and max prices as lines)</span></span>
+<span id="cb21-36"><a href="#cb21-36" aria-hidden="true" tabindex="-1"></a>    fig <span class="op">=</span> px.line(</span>
+<span id="cb21-37"><a href="#cb21-37" aria-hidden="true" tabindex="-1"></a>        price_range, </span>
+<span id="cb21-38"><a href="#cb21-38" aria-hidden="true" tabindex="-1"></a>        x<span class="op">=</span><span class="st">'year'</span>, </span>
+<span id="cb21-39"><a href="#cb21-39" aria-hidden="true" tabindex="-1"></a>        y<span class="op">=</span>[<span class="st">'min'</span>, <span class="st">'max'</span>], </span>
+<span id="cb21-40"><a href="#cb21-40" aria-hidden="true" tabindex="-1"></a>        title<span class="op">=</span><span class="ss">f'Price Range (Min &amp; Max) Per Year for </span><span class="sc">{</span>selected_food_item<span class="sc">}</span><span class="ss"> Across Regions'</span>,</span>
+<span id="cb21-41"><a href="#cb21-41" aria-hidden="true" tabindex="-1"></a>        labels<span class="op">=</span>{<span class="st">'year'</span>: <span class="st">'year'</span>, <span class="st">'value'</span>: <span class="st">'Price'</span>},</span>
+<span id="cb21-42"><a href="#cb21-42" aria-hidden="true" tabindex="-1"></a>        line_shape<span class="op">=</span><span class="st">'linear'</span></span>
+<span id="cb21-43"><a href="#cb21-43" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb21-44"><a href="#cb21-44" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb21-45"><a href="#cb21-45" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> fig</span>
+<span id="cb21-46"><a href="#cb21-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-47"><a href="#cb21-47" aria-hidden="true" tabindex="-1"></a><span class="co"># Run the app</span></span>
+<span id="cb21-48"><a href="#cb21-48" aria-hidden="true" tabindex="-1"></a>apprange.run_server(debug<span class="op">=</span><span class="va">True</span>, port<span class="op">=</span><span class="dv">8053</span>, mode<span class="op">=</span><span class="st">'inline'</span>, name<span class="op">=</span><span class="st">"apprange"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+
+        <iframe width="100%" height="650" src="http://127.0.0.1:8053/" frameborder="0" allowfullscreen=""></iframe>
+        
+</div>
+</div>
+<p>Key Observations: 1. Overall Trend - Both the minimum and maximum prices show a general upward trend over the years, indicating an overall increase in the price of every food items. Some even recorded highest price increase on 2020, likely due to the COVID-19 pandemic and its impact on supply chains. 2. Price Range - The gap between the minimum and maximum prices for most items widens significantly in 2020 and 2021. This suggests that there were greater variations in prices across regions during these years.</p>
+<p>Posssible causes: 1. COVID-19 Pandemic - The pandemic disrupted supply chains and increased demand for certain food items, which could have led to price volatility. 2. Regional Differences - Differences in the impact of the pandemic on regional economies and agricultural production could have contributed to price variations.</p>
+<p>To truly know if the regions really have price difference over the years, hypothesis testing must be done. Please refer to <ins>.._testing.ipynb</ins> to know why Kruskall-Wallis was used here.</p>
+<div id="cell-22" class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co">#open the csv file that was already analyzed with kruskall wallis test.</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>hypothesis_results <span class="op">=</span> <span class="st">"../Data/Processed/hypothesis_testing_result.csv"</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>hyp_df <span class="op">=</span> pd.read_csv(hypothesis_results)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-23" class="cell" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># View the first few rows of the dataset</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(hyp_df.head())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   Year  Food_Item  H-statistic        p-value           Result
+0  2007      beans          NaN            NaN  Not Significant
+1  2007    c_beans  1077.368029  2.491117e-218      Significant
+2  2007  c_cabbage  1105.762042  2.066749e-224      Significant
+3  2007  c_carrots  1093.290901  9.693593e-222      Significant
+4  2007     c_eggs   905.101619  1.726764e-181      Significant</code></pre>
+</div>
+</div>
+<div id="cell-24" class="cell" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter the dataframe to keep only rows where 'food_item' starts with 'c_'</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>hyp_df_filtered <span class="op">=</span> hyp_df[hyp_df[<span class="st">'Food_Item'</span>].<span class="bu">str</span>.startswith(<span class="st">'c_'</span>)]</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(hyp_df_filtered)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      Year    Food_Item  H-statistic        p-value       Result
+1     2007      c_beans  1077.368029  2.491117e-218  Significant
+2     2007    c_cabbage  1105.762042  2.066749e-224  Significant
+3     2007    c_carrots  1093.290901  9.693593e-222  Significant
+4     2007       c_eggs   905.101619  1.726764e-181  Significant
+5     2007     c_garlic   393.719714   3.807277e-73  Significant
+...    ...          ...          ...            ...          ...
+1088  2025  c_meat_pork    44.757215   2.646148e-04  Significant
+1089  2025     c_onions   101.512409   4.662566e-14  Significant
+1090  2025   c_potatoes    90.632301   4.683642e-12  Significant
+1091  2025       c_rice    67.209085   6.484158e-08  Significant
+1092  2025   c_tomatoes    70.027332   2.133517e-08  Significant
+
+[228 rows x 5 columns]</code></pre>
+</div>
+</div>
+<div id="cell-25" class="cell" data-execution_count="17">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># removing prefix _c in the food items</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>hyp_df_filtered.loc[:, <span class="st">'Food_Item'</span>] <span class="op">=</span> hyp_df_filtered[<span class="st">'Food_Item'</span>].<span class="bu">str</span>.replace(<span class="st">'c_'</span>, <span class="st">''</span>, regex<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(hyp_df_filtered)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      Year  Food_Item  H-statistic        p-value       Result
+1     2007      beans  1077.368029  2.491117e-218  Significant
+2     2007    cabbage  1105.762042  2.066749e-224  Significant
+3     2007    carrots  1093.290901  9.693593e-222  Significant
+4     2007       eggs   905.101619  1.726764e-181  Significant
+5     2007     garlic   393.719714   3.807277e-73  Significant
+...    ...        ...          ...            ...          ...
+1088  2025  meat_pork    44.757215   2.646148e-04  Significant
+1089  2025     onions   101.512409   4.662566e-14  Significant
+1090  2025   potatoes    90.632301   4.683642e-12  Significant
+1091  2025       rice    67.209085   6.484158e-08  Significant
+1092  2025   tomatoes    70.027332   2.133517e-08  Significant
+
+[228 rows x 5 columns]</code></pre>
+</div>
+</div>
+<div id="cell-26" class="cell" data-execution_count="18">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>year_dropdown <span class="op">=</span> widgets.Dropdown(</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>    options<span class="op">=</span>hyp_df_filtered[<span class="st">"Year"</span>].unique(),</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>    value<span class="op">=</span>hyp_df_filtered[<span class="st">"Year"</span>].<span class="bu">min</span>(),</span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>    description<span class="op">=</span><span class="st">"Select Year:"</span>,</span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>    style<span class="op">=</span>{<span class="st">'description_width'</span>: <span class="st">'initial'</span>}</span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Output widget to display the table</span></span>
+<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a>output <span class="op">=</span> widgets.Output()</span>
+<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> update_table(change):</span>
+<span id="cb29-12"><a href="#cb29-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">with</span> output:</span>
+<span id="cb29-13"><a href="#cb29-13" aria-hidden="true" tabindex="-1"></a>        output.clear_output()</span>
+<span id="cb29-14"><a href="#cb29-14" aria-hidden="true" tabindex="-1"></a>        display(hyp_df_filtered[hyp_df_filtered[<span class="st">"Year"</span>] <span class="op">==</span> year_dropdown.value])</span>
+<span id="cb29-15"><a href="#cb29-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-16"><a href="#cb29-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Trigger update on change</span></span>
+<span id="cb29-17"><a href="#cb29-17" aria-hidden="true" tabindex="-1"></a>year_dropdown.observe(update_table, names<span class="op">=</span><span class="st">"value"</span>)</span>
+<span id="cb29-18"><a href="#cb29-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-19"><a href="#cb29-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Display widgets</span></span>
+<span id="cb29-20"><a href="#cb29-20" aria-hidden="true" tabindex="-1"></a>display(year_dropdown, output)</span>
+<span id="cb29-21"><a href="#cb29-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-22"><a href="#cb29-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Initial Table Display</span></span>
+<span id="cb29-23"><a href="#cb29-23" aria-hidden="true" tabindex="-1"></a>update_table(<span class="va">None</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id":"28ef7174a1754777a753227aaefa5616","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
+</script>
+</div>
+<div class="cell-output cell-output-display">
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id":"b09a8d33de8147419c49f2df5b46df9d","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
+</script>
+</div>
+</div>
+<div id="cell-27" class="cell" data-execution_count="19">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># or you can just count the number of unique Results</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>hyp_df_filtered[<span class="st">"Result"</span>].value_counts()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="19">
+<pre><code>Result
+Significant    228
+Name: count, dtype: int64</code></pre>
+</div>
+</div>
+<p>This means all the items for all the regions over the year have different prices. But which regions have different prices?</p>
+<div id="cell-29" class="cell" data-execution_count="28">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the available items and years for the dropdowns</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>items <span class="op">=</span> df_range_filtered[<span class="st">'Food_Items'</span>].unique().tolist()</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>years <span class="op">=</span> df_range_filtered[<span class="st">'year'</span>].unique().tolist()</span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 1: Create the function that will update the graph based on selected item and year</span></span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> update_heatmap(selected_item, selected_year):</span>
+<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Filter for the selected item and year</span></span>
+<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a>    filter_df <span class="op">=</span> df_range_filtered[(df_range_filtered[<span class="st">'Food_Items'</span>] <span class="op">==</span> selected_item) <span class="op">&amp;</span> (df_range_filtered[<span class="st">'year'</span>] <span class="op">==</span> selected_year)]</span>
+<span id="cb32-9"><a href="#cb32-9" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb32-10"><a href="#cb32-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Perform Dunn's Test to check which regions differ</span></span>
+<span id="cb32-11"><a href="#cb32-11" aria-hidden="true" tabindex="-1"></a>    regions <span class="op">=</span> filter_df[<span class="st">'Region'</span>].unique()</span>
+<span id="cb32-12"><a href="#cb32-12" aria-hidden="true" tabindex="-1"></a>    dunn_result <span class="op">=</span> sp.posthoc_dunn(filter_df, val_col<span class="op">=</span><span class="st">'Price'</span>, group_col<span class="op">=</span><span class="st">'Region'</span>)</span>
+<span id="cb32-13"><a href="#cb32-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-14"><a href="#cb32-14" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Prepare heatmap data (p-values matrix)</span></span>
+<span id="cb32-15"><a href="#cb32-15" aria-hidden="true" tabindex="-1"></a>    p_values_matrix <span class="op">=</span> np.zeros((<span class="bu">len</span>(regions), <span class="bu">len</span>(regions)))</span>
+<span id="cb32-16"><a href="#cb32-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-17"><a href="#cb32-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i, region1 <span class="kw">in</span> <span class="bu">enumerate</span>(regions):</span>
+<span id="cb32-18"><a href="#cb32-18" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> j, region2 <span class="kw">in</span> <span class="bu">enumerate</span>(regions):</span>
+<span id="cb32-19"><a href="#cb32-19" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> region1 <span class="op">!=</span> region2:</span>
+<span id="cb32-20"><a href="#cb32-20" aria-hidden="true" tabindex="-1"></a>                p_value <span class="op">=</span> dunn_result.loc[region1, region2]</span>
+<span id="cb32-21"><a href="#cb32-21" aria-hidden="true" tabindex="-1"></a>                p_values_matrix[i, j] <span class="op">=</span> p_value</span>
+<span id="cb32-22"><a href="#cb32-22" aria-hidden="true" tabindex="-1"></a>            <span class="cf">else</span>:</span>
+<span id="cb32-23"><a href="#cb32-23" aria-hidden="true" tabindex="-1"></a>                p_values_matrix[i, j] <span class="op">=</span> np.nan  <span class="co"># No need for comparison within the same region</span></span>
+<span id="cb32-24"><a href="#cb32-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-25"><a href="#cb32-25" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create a DataFrame for the heatmap using the regions as both rows and columns</span></span>
+<span id="cb32-26"><a href="#cb32-26" aria-hidden="true" tabindex="-1"></a>    heatmap_df <span class="op">=</span> pd.DataFrame(p_values_matrix, columns<span class="op">=</span>regions, index<span class="op">=</span>regions)</span>
+<span id="cb32-27"><a href="#cb32-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-28"><a href="#cb32-28" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Replace NaN values with a large value (optional, to handle missing pairwise comparisons)</span></span>
+<span id="cb32-29"><a href="#cb32-29" aria-hidden="true" tabindex="-1"></a>    heatmap_df <span class="op">=</span> heatmap_df.fillna(<span class="fl">1.0</span>)  <span class="co"># Optionally replace NaNs with 1 (indicating no comparison)</span></span>
+<span id="cb32-30"><a href="#cb32-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-31"><a href="#cb32-31" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Custom colorscale: green for 1 and red for 0</span></span>
+<span id="cb32-32"><a href="#cb32-32" aria-hidden="true" tabindex="-1"></a>    custom_colorscale <span class="op">=</span> [</span>
+<span id="cb32-33"><a href="#cb32-33" aria-hidden="true" tabindex="-1"></a>        [<span class="dv">0</span>, <span class="st">"darkred"</span>], <span class="co"># 0 -&gt; red</span></span>
+<span id="cb32-34"><a href="#cb32-34" aria-hidden="true" tabindex="-1"></a>        [<span class="fl">0.166</span>, <span class="st">"red"</span>],</span>
+<span id="cb32-35"><a href="#cb32-35" aria-hidden="true" tabindex="-1"></a>        [<span class="fl">0.332</span>, <span class="st">"lightcoral"</span>],</span>
+<span id="cb32-36"><a href="#cb32-36" aria-hidden="true" tabindex="-1"></a>        [<span class="fl">0.5</span>, <span class="st">"yellow"</span>],</span>
+<span id="cb32-37"><a href="#cb32-37" aria-hidden="true" tabindex="-1"></a>        [<span class="fl">0.66</span>, <span class="st">"palegreen"</span>],</span>
+<span id="cb32-38"><a href="#cb32-38" aria-hidden="true" tabindex="-1"></a>        [<span class="fl">0.832</span>, <span class="st">"green"</span>],</span>
+<span id="cb32-39"><a href="#cb32-39" aria-hidden="true" tabindex="-1"></a>        [<span class="dv">1</span>, <span class="st">"darkgreen"</span>]   <span class="co"># 1 -&gt; green  </span></span>
+<span id="cb32-40"><a href="#cb32-40" aria-hidden="true" tabindex="-1"></a>    ]</span>
+<span id="cb32-41"><a href="#cb32-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-42"><a href="#cb32-42" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create the heatmap figure with custom colorscale</span></span>
+<span id="cb32-43"><a href="#cb32-43" aria-hidden="true" tabindex="-1"></a>    fig <span class="op">=</span> go.Figure(data<span class="op">=</span>go.Heatmap(</span>
+<span id="cb32-44"><a href="#cb32-44" aria-hidden="true" tabindex="-1"></a>        z<span class="op">=</span>heatmap_df.values,</span>
+<span id="cb32-45"><a href="#cb32-45" aria-hidden="true" tabindex="-1"></a>        x<span class="op">=</span>heatmap_df.columns,</span>
+<span id="cb32-46"><a href="#cb32-46" aria-hidden="true" tabindex="-1"></a>        y<span class="op">=</span>heatmap_df.index,</span>
+<span id="cb32-47"><a href="#cb32-47" aria-hidden="true" tabindex="-1"></a>        colorscale<span class="op">=</span>custom_colorscale,</span>
+<span id="cb32-48"><a href="#cb32-48" aria-hidden="true" tabindex="-1"></a>        colorbar<span class="op">=</span><span class="bu">dict</span>(title<span class="op">=</span><span class="st">'p-value'</span>),</span>
+<span id="cb32-49"><a href="#cb32-49" aria-hidden="true" tabindex="-1"></a>        zmin<span class="op">=</span><span class="dv">0</span>, zmax<span class="op">=</span><span class="dv">1</span>  <span class="co"># Normalize the range from 0 to 1</span></span>
+<span id="cb32-50"><a href="#cb32-50" aria-hidden="true" tabindex="-1"></a>    ))</span>
+<span id="cb32-51"><a href="#cb32-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-52"><a href="#cb32-52" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Update layout to improve axis labels and graph size</span></span>
+<span id="cb32-53"><a href="#cb32-53" aria-hidden="true" tabindex="-1"></a>    fig.update_layout(</span>
+<span id="cb32-54"><a href="#cb32-54" aria-hidden="true" tabindex="-1"></a>        title<span class="op">=</span><span class="ss">f"Dunn's Test p-values for </span><span class="sc">{</span>selected_item<span class="sc">}</span><span class="ss"> in </span><span class="sc">{</span>selected_year<span class="sc">}</span><span class="ss"> by Region"</span>,</span>
+<span id="cb32-55"><a href="#cb32-55" aria-hidden="true" tabindex="-1"></a>        xaxis_title<span class="op">=</span><span class="st">'Region'</span>,</span>
+<span id="cb32-56"><a href="#cb32-56" aria-hidden="true" tabindex="-1"></a>        yaxis_title<span class="op">=</span><span class="st">'Region'</span>,</span>
+<span id="cb32-57"><a href="#cb32-57" aria-hidden="true" tabindex="-1"></a>        autosize<span class="op">=</span><span class="va">False</span>,  <span class="co"># Disable autosize</span></span>
+<span id="cb32-58"><a href="#cb32-58" aria-hidden="true" tabindex="-1"></a>        width<span class="op">=</span><span class="dv">800</span>,  <span class="co"># Set width of the figure</span></span>
+<span id="cb32-59"><a href="#cb32-59" aria-hidden="true" tabindex="-1"></a>        height<span class="op">=</span><span class="dv">800</span>,  <span class="co"># Set height of the figure</span></span>
+<span id="cb32-60"><a href="#cb32-60" aria-hidden="true" tabindex="-1"></a>        margin<span class="op">=</span><span class="bu">dict</span>(l<span class="op">=</span><span class="dv">100</span>, r<span class="op">=</span><span class="dv">100</span>, t<span class="op">=</span><span class="dv">100</span>, b<span class="op">=</span><span class="dv">100</span>),  <span class="co"># Increase margins for better visibility</span></span>
+<span id="cb32-61"><a href="#cb32-61" aria-hidden="true" tabindex="-1"></a>        xaxis<span class="op">=</span><span class="bu">dict</span>(tickmode<span class="op">=</span><span class="st">'array'</span>, tickvals<span class="op">=</span>heatmap_df.columns, ticktext<span class="op">=</span>heatmap_df.columns, tickangle<span class="op">=</span><span class="dv">45</span>),  <span class="co"># Rotate x-axis labels for better readability</span></span>
+<span id="cb32-62"><a href="#cb32-62" aria-hidden="true" tabindex="-1"></a>        yaxis<span class="op">=</span><span class="bu">dict</span>(tickmode<span class="op">=</span><span class="st">'array'</span>, tickvals<span class="op">=</span>heatmap_df.index, ticktext<span class="op">=</span>heatmap_df.index, tickangle<span class="op">=</span><span class="dv">0</span>)  <span class="co"># Rotate y-axis labels for better readability</span></span>
+<span id="cb32-63"><a href="#cb32-63" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb32-64"><a href="#cb32-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-65"><a href="#cb32-65" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> fig</span>
+<span id="cb32-66"><a href="#cb32-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-67"><a href="#cb32-67" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 2: Create the Dash app</span></span>
+<span id="cb32-68"><a href="#cb32-68" aria-hidden="true" tabindex="-1"></a>appDunns <span class="op">=</span> dash.Dash(<span class="va">__name__</span>)</span>
+<span id="cb32-69"><a href="#cb32-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-70"><a href="#cb32-70" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the layout with dropdowns and the graph</span></span>
+<span id="cb32-71"><a href="#cb32-71" aria-hidden="true" tabindex="-1"></a>appDunns.layout <span class="op">=</span> html.Div([</span>
+<span id="cb32-72"><a href="#cb32-72" aria-hidden="true" tabindex="-1"></a>    html.H3(<span class="st">"Price Comparison Heatmap by Region"</span>),</span>
+<span id="cb32-73"><a href="#cb32-73" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb32-74"><a href="#cb32-74" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Dropdown for selecting item</span></span>
+<span id="cb32-75"><a href="#cb32-75" aria-hidden="true" tabindex="-1"></a>    html.Label(<span class="st">'Select Item:'</span>),</span>
+<span id="cb32-76"><a href="#cb32-76" aria-hidden="true" tabindex="-1"></a>    dcc.Dropdown(</span>
+<span id="cb32-77"><a href="#cb32-77" aria-hidden="true" tabindex="-1"></a>        <span class="bu">id</span><span class="op">=</span><span class="st">'item-dropdown'</span>,</span>
+<span id="cb32-78"><a href="#cb32-78" aria-hidden="true" tabindex="-1"></a>        options<span class="op">=</span>[{<span class="st">'label'</span>: item, <span class="st">'value'</span>: item} <span class="cf">for</span> item <span class="kw">in</span> items],</span>
+<span id="cb32-79"><a href="#cb32-79" aria-hidden="true" tabindex="-1"></a>        value<span class="op">=</span>items[<span class="dv">0</span>],  <span class="co"># default value</span></span>
+<span id="cb32-80"><a href="#cb32-80" aria-hidden="true" tabindex="-1"></a>        style<span class="op">=</span>{<span class="st">'width'</span>: <span class="st">'50%'</span>}</span>
+<span id="cb32-81"><a href="#cb32-81" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb32-82"><a href="#cb32-82" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb32-83"><a href="#cb32-83" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Dropdown for selecting year</span></span>
+<span id="cb32-84"><a href="#cb32-84" aria-hidden="true" tabindex="-1"></a>    html.Label(<span class="st">'Select Year:'</span>),</span>
+<span id="cb32-85"><a href="#cb32-85" aria-hidden="true" tabindex="-1"></a>    dcc.Dropdown(</span>
+<span id="cb32-86"><a href="#cb32-86" aria-hidden="true" tabindex="-1"></a>        <span class="bu">id</span><span class="op">=</span><span class="st">'year-dropdown'</span>,</span>
+<span id="cb32-87"><a href="#cb32-87" aria-hidden="true" tabindex="-1"></a>        options<span class="op">=</span>[{<span class="st">'label'</span>: year, <span class="st">'value'</span>: year} <span class="cf">for</span> year <span class="kw">in</span> years],</span>
+<span id="cb32-88"><a href="#cb32-88" aria-hidden="true" tabindex="-1"></a>        value<span class="op">=</span>years[<span class="dv">0</span>],  <span class="co"># default value</span></span>
+<span id="cb32-89"><a href="#cb32-89" aria-hidden="true" tabindex="-1"></a>        style<span class="op">=</span>{<span class="st">'width'</span>: <span class="st">'50%'</span>}</span>
+<span id="cb32-90"><a href="#cb32-90" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb32-91"><a href="#cb32-91" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb32-92"><a href="#cb32-92" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Graph for showing the heatmap</span></span>
+<span id="cb32-93"><a href="#cb32-93" aria-hidden="true" tabindex="-1"></a>    dcc.Graph(<span class="bu">id</span><span class="op">=</span><span class="st">'heatmap-graph'</span>)</span>
+<span id="cb32-94"><a href="#cb32-94" aria-hidden="true" tabindex="-1"></a>])</span>
+<span id="cb32-95"><a href="#cb32-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-96"><a href="#cb32-96" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 3: Create callback to update the heatmap based on dropdown selection</span></span>
+<span id="cb32-97"><a href="#cb32-97" aria-hidden="true" tabindex="-1"></a><span class="at">@appDunns.callback</span>(</span>
+<span id="cb32-98"><a href="#cb32-98" aria-hidden="true" tabindex="-1"></a>    dash.dependencies.Output(<span class="st">'heatmap-graph'</span>, <span class="st">'figure'</span>),</span>
+<span id="cb32-99"><a href="#cb32-99" aria-hidden="true" tabindex="-1"></a>    [dash.dependencies.Input(<span class="st">'item-dropdown'</span>, <span class="st">'value'</span>),</span>
+<span id="cb32-100"><a href="#cb32-100" aria-hidden="true" tabindex="-1"></a>     dash.dependencies.Input(<span class="st">'year-dropdown'</span>, <span class="st">'value'</span>)]</span>
+<span id="cb32-101"><a href="#cb32-101" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb32-102"><a href="#cb32-102" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> update_graph(selected_item, selected_year):</span>
+<span id="cb32-103"><a href="#cb32-103" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> update_heatmap(selected_item, selected_year)</span>
+<span id="cb32-104"><a href="#cb32-104" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-105"><a href="#cb32-105" aria-hidden="true" tabindex="-1"></a><span class="co"># Run the app</span></span>
+<span id="cb32-106"><a href="#cb32-106" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">'__main__'</span>:</span>
+<span id="cb32-107"><a href="#cb32-107" aria-hidden="true" tabindex="-1"></a>    appDunns.run_server(debug<span class="op">=</span><span class="va">True</span>, port<span class="op">=</span><span class="dv">8054</span>, mode<span class="op">=</span><span class="st">'inline'</span>, name<span class="op">=</span><span class="st">"appDunns"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+
+        <iframe width="100%" height="650" src="http://127.0.0.1:8054/" frameborder="0" allowfullscreen=""></iframe>
+        
+</div>
+</div>
+<p>This heatmap visualizes the results of a Dunn’s post-hoc test for significant differences in prices of different food items between regions across the years.<br> <space><br> The color scale indicates the following: * Red (Close to 0): Indicates a statistically significant difference in bean prices between two regions. * Light Green to Yellow (Around 0.2 to 0.8): Suggests a possible difference, but not statistically significant based on the chosen significance level (typically 0.05) * Dark Green (Close to 0): Indicates no statistically significant difference in bean prices between the two regions.</space></p>
+</section>
+<section id="key-observations" class="level4">
+<h4 class="anchored" data-anchor-id="key-observations">Key Observations</h4>
+<ol type="1">
+<li>Significant Differences Exist: The presence of so many red cells indicates that there are statistically significant differences in food prices in almost all regions at any given years.</li>
+<li>No Significant Differences: patches of green indicate pairs of regions where the Dunn’s test did not find a statistically significant difference in food prices, but there are only few of them.</li>
+<li>Market Average Comparison: The “Market Average” row/column allows you to see how each region’s prices compare to the overall average. Dark red cells in this row/column would indicate regions with prices significantly different from the market average.</li>
+</ol>
+<p>Food price Prediction 3 years into the future</p>
+<div id="cell-32" class="cell" data-execution_count="21">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co">#dropping uneeded columns</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>df_unneeded_range <span class="op">=</span> df_cleaned_range.drop(columns<span class="op">=</span>[<span class="st">'country'</span>, <span class="st">'City'</span>, <span class="st">'lat'</span>, <span class="st">'lon'</span>, <span class="st">'Province'</span>, <span class="st">'year'</span>, <span class="st">'month'</span>])</span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Reshaping from wide to long format (including year and month as part of the identifier)</span></span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>df_range <span class="op">=</span> df_unneeded_range.melt(id_vars<span class="op">=</span>[<span class="st">'Region'</span>, <span class="st">'Date'</span>], var_name<span class="op">=</span><span class="st">'Food_Items'</span>, value_name<span class="op">=</span><span class="st">'Price'</span>)</span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a>df_range_filtered <span class="op">=</span> df_range[df_range[<span class="st">'Food_Items'</span>].<span class="bu">str</span>.startswith(<span class="st">'c_'</span>)]</span>
+<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a>df_range_filtered.loc[:, <span class="st">'Food_Items'</span>] <span class="op">=</span> df_range_filtered[<span class="st">'Food_Items'</span>].<span class="bu">str</span>.replace(<span class="st">'c_'</span>, <span class="st">''</span>, regex<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb33-10"><a href="#cb33-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-11"><a href="#cb33-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Sort by date</span></span>
+<span id="cb33-12"><a href="#cb33-12" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df_range_filtered.sort_values(by<span class="op">=</span>[<span class="st">'Region'</span>, <span class="st">'Date'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-33" class="cell" data-execution_count="22">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Suppress specific warnings</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>warnings.filterwarnings(<span class="st">"ignore"</span>, category<span class="op">=</span><span class="pp">UserWarning</span>, module<span class="op">=</span><span class="st">"sklearn"</span>)</span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>warnings.filterwarnings(<span class="st">"ignore"</span>, category<span class="op">=</span><span class="pp">FutureWarning</span>, module<span class="op">=</span><span class="st">"sklearn"</span>)</span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>warnings.filterwarnings(<span class="st">"ignore"</span>, category<span class="op">=</span><span class="pp">FutureWarning</span>, module<span class="op">=</span><span class="st">"pmdarima"</span>)</span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>warnings.filterwarnings(<span class="st">"ignore"</span>, category<span class="op">=</span><span class="pp">DeprecationWarning</span>, module<span class="op">=</span><span class="st">"pmdarima"</span>)</span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert date column to datetime</span></span>
+<span id="cb34-9"><a href="#cb34-9" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'Date'</span>] <span class="op">=</span> pd.to_datetime(df[<span class="st">'Date'</span>])</span>
+<span id="cb34-10"><a href="#cb34-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-11"><a href="#cb34-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Sort by date</span></span>
+<span id="cb34-12"><a href="#cb34-12" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df.sort_values(by<span class="op">=</span>[<span class="st">'Region'</span>, <span class="st">'Date'</span>])</span>
+<span id="cb34-13"><a href="#cb34-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-14"><a href="#cb34-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Dropdown for interactive visualization</span></span>
+<span id="cb34-15"><a href="#cb34-15" aria-hidden="true" tabindex="-1"></a>regions <span class="op">=</span> df[<span class="st">'Region'</span>].unique()</span>
+<span id="cb34-16"><a href="#cb34-16" aria-hidden="true" tabindex="-1"></a>items <span class="op">=</span> df[<span class="st">'Food_Items'</span>].unique()</span>
+<span id="cb34-17"><a href="#cb34-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-18"><a href="#cb34-18" aria-hidden="true" tabindex="-1"></a>region_dropdown <span class="op">=</span> widgets.Dropdown(options<span class="op">=</span>regions, description<span class="op">=</span><span class="st">'Region:'</span>)</span>
+<span id="cb34-19"><a href="#cb34-19" aria-hidden="true" tabindex="-1"></a>item_dropdown <span class="op">=</span> widgets.Dropdown(options<span class="op">=</span>items, description<span class="op">=</span><span class="st">'Food Item:'</span>)</span>
+<span id="cb34-20"><a href="#cb34-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-21"><a href="#cb34-21" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> preprocess_data(region, item):</span>
+<span id="cb34-22"><a href="#cb34-22" aria-hidden="true" tabindex="-1"></a>    region_df <span class="op">=</span> df[(df[<span class="st">'Region'</span>] <span class="op">==</span> region) <span class="op">&amp;</span> (df[<span class="st">'Food_Items'</span>] <span class="op">==</span> item)]</span>
+<span id="cb34-23"><a href="#cb34-23" aria-hidden="true" tabindex="-1"></a>    region_df <span class="op">=</span> (</span>
+<span id="cb34-24"><a href="#cb34-24" aria-hidden="true" tabindex="-1"></a>        region_df.groupby(<span class="st">'Date'</span>, as_index<span class="op">=</span><span class="va">False</span>)[<span class="st">'Price'</span>]</span>
+<span id="cb34-25"><a href="#cb34-25" aria-hidden="true" tabindex="-1"></a>        .mean()  <span class="co"># Aggregate duplicate dates by averaging</span></span>
+<span id="cb34-26"><a href="#cb34-26" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb34-27"><a href="#cb34-27" aria-hidden="true" tabindex="-1"></a>    region_df <span class="op">=</span> region_df.set_index(<span class="st">'Date'</span>).asfreq(<span class="st">'MS'</span>)  <span class="co"># Ensure monthly frequency</span></span>
+<span id="cb34-28"><a href="#cb34-28" aria-hidden="true" tabindex="-1"></a>    region_df[<span class="st">'Price'</span>] <span class="op">=</span> region_df[<span class="st">'Price'</span>].interpolate()  <span class="co"># Fill missing values</span></span>
+<span id="cb34-29"><a href="#cb34-29" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> region_df</span>
+<span id="cb34-30"><a href="#cb34-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-31"><a href="#cb34-31" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> update_graph(region, item):</span>
+<span id="cb34-32"><a href="#cb34-32" aria-hidden="true" tabindex="-1"></a>    region_df <span class="op">=</span> preprocess_data(region, item)</span>
+<span id="cb34-33"><a href="#cb34-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-34"><a href="#cb34-34" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">len</span>(region_df) <span class="op">&lt;</span> <span class="dv">12</span>:</span>
+<span id="cb34-35"><a href="#cb34-35" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"Not enough data for </span><span class="sc">{</span>region<span class="sc">}</span><span class="ss"> - </span><span class="sc">{</span>item<span class="sc">}</span><span class="ss"> to forecast."</span>)</span>
+<span id="cb34-36"><a href="#cb34-36" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span></span>
+<span id="cb34-37"><a href="#cb34-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-38"><a href="#cb34-38" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Use AutoARIMA to find the best model</span></span>
+<span id="cb34-39"><a href="#cb34-39" aria-hidden="true" tabindex="-1"></a>    model <span class="op">=</span> auto_arima(region_df[<span class="st">'Price'</span>], seasonal<span class="op">=</span><span class="va">True</span>, m<span class="op">=</span><span class="dv">12</span>, stepwise<span class="op">=</span><span class="va">True</span>, trace<span class="op">=</span><span class="va">True</span>, max_order<span class="op">=</span><span class="va">None</span>, stationary<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb34-40"><a href="#cb34-40" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb34-41"><a href="#cb34-41" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Forecast the next 36 months</span></span>
+<span id="cb34-42"><a href="#cb34-42" aria-hidden="true" tabindex="-1"></a>    forecast <span class="op">=</span> model.predict(n_periods<span class="op">=</span><span class="dv">36</span>)</span>
+<span id="cb34-43"><a href="#cb34-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-44"><a href="#cb34-44" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Plot the historical data and forecast</span></span>
+<span id="cb34-45"><a href="#cb34-45" aria-hidden="true" tabindex="-1"></a>    plt.figure(figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">6</span>))</span>
+<span id="cb34-46"><a href="#cb34-46" aria-hidden="true" tabindex="-1"></a>    plt.plot(region_df.index, region_df[<span class="st">'Price'</span>], label<span class="op">=</span><span class="st">'Historical Prices'</span>)</span>
+<span id="cb34-47"><a href="#cb34-47" aria-hidden="true" tabindex="-1"></a>    plt.plot(pd.date_range(region_df.index[<span class="op">-</span><span class="dv">1</span>], periods<span class="op">=</span><span class="dv">37</span>, freq<span class="op">=</span><span class="st">'MS'</span>)[<span class="dv">1</span>:], forecast, label<span class="op">=</span><span class="st">'Forecast'</span>, linestyle<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'red'</span>)</span>
+<span id="cb34-48"><a href="#cb34-48" aria-hidden="true" tabindex="-1"></a>    plt.xlabel(<span class="st">'Date'</span>)</span>
+<span id="cb34-49"><a href="#cb34-49" aria-hidden="true" tabindex="-1"></a>    plt.ylabel(<span class="st">'Price'</span>)</span>
+<span id="cb34-50"><a href="#cb34-50" aria-hidden="true" tabindex="-1"></a>    plt.legend()</span>
+<span id="cb34-51"><a href="#cb34-51" aria-hidden="true" tabindex="-1"></a>    plt.title(<span class="ss">f'Price Forecast for </span><span class="sc">{</span>region<span class="sc">}</span><span class="ss"> - </span><span class="sc">{</span>item<span class="sc">}</span><span class="ss"> (Next 36 Months)'</span>)</span>
+<span id="cb34-52"><a href="#cb34-52" aria-hidden="true" tabindex="-1"></a>    plt.show()</span>
+<span id="cb34-53"><a href="#cb34-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-54"><a href="#cb34-54" aria-hidden="true" tabindex="-1"></a>interactive_plot <span class="op">=</span> widgets.interactive(update_graph, region<span class="op">=</span>region_dropdown, item<span class="op">=</span>item_dropdown)</span>
+<span id="cb34-55"><a href="#cb34-55" aria-hidden="true" tabindex="-1"></a>display(interactive_plot)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id":"5e29f90ce41449bda281827936794e41","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
+</script>
+</div>
+</div>
+</section>
+<section id="key-observations-1" class="level4">
+<h4 class="anchored" data-anchor-id="key-observations-1">Key Observations</h4>
+<ol type="1">
+<li>Historical Price Volatility: The blue line representing historical prices shows significant fluctuations, especially noticeable spikes around 2008 and smaller ones in other years. This indicates that most food prices have been subject to considerable volatility over the past two decades.</li>
+<li>Recent Price Increase: There’s a clear upward trend in food prices in the period leading up to the forecast (roughly from 2020 to 2024). This suggests recent factors have been pushing prices higher.</li>
+<li>Relatively Stable Forecast: The red dashed line, representing the forecast for the next 36 months, shows a relatively stable and slightly upward trend. The model predicts a continued but moderated increase compared to the recent past.</li>
+</ol>
+</section>
+<section id="key-observations-2" class="level4">
+<h4 class="anchored" data-anchor-id="key-observations-2">Key Observations</h4>
+<ol type="1">
+<li>Historical Volatility:
+<ul>
+<li>Weather Patterns:adverse weather events in key agricultural regions can significantly impact supply and cause price volatility.</li>
+<li>Changes in Demand: Fluctuations in global demand, driven by population growth or economic factors, can also contribute to price swings.</li>
+</ul></li>
+<li>Recent Price Increase:
+<ul>
+<li>Inflation: General inflation in the economy could be pushing up agricultural commodity prices.</li>
+<li>Supply Chain Issues: Disruptions to global supply chains (e.g., due to pandemics, conflicts, or trade policies) can lead to shortages and price increases.</li>
+<li>Increased Input Costs: Rising costs of fertilizers, fuel, and labor can increase the cost of food production, which could be passed on to consumers.</li>
+</ul></li>
+<li>Relatively Stable Forecast:
+<ul>
+<li>Model Assumption: ARIMA models assume that, to some extent, future trends will resemble past patterns. The stable forecast suggests the model has not picked up any strong upward or downward pressures for the next 36 months beyond what is already captured in the recent trend.</li>
+</ul></li>
+</ol>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

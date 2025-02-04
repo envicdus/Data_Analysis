@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.40">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>cleaning – portfolio_website</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-fad5ab29a14bbe0a7a7d29177f3f13bb.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">portfolio_website</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <span class="nav-link">
+<span class="menu-text">N. V. Decio</span>
+    </span>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <span class="nav-link">
+<span class="menu-text">Portfolios.qmd</span>
+    </span>
+  </li>  
+  <li class="nav-item">
+    <span class="nav-link">
+<span class="menu-text">Trainings.qmd</span>
+    </span>
+  </li>  
+  <li class="nav-item">
+    <span class="nav-link">
+<span class="menu-text">Resume.qmd</span>
+    </span>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<div id="cell-0" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-1" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load your dataset (replace with your actual file path)</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>file_path <span class="op">=</span> <span class="st">"../External/full_dataset.csv"</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(file_path)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-2" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the first few rows before cleaning</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Before Cleaning:"</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df.head())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Before Cleaning:
+  ISO3      country                         adm1_name adm2_name mkt_name  \
+0  PHL  Philippines  Cordillera Administrative region      Abra     Abra   
+1  PHL  Philippines  Cordillera Administrative region      Abra     Abra   
+2  PHL  Philippines  Cordillera Administrative region      Abra     Abra   
+3  PHL  Philippines  Cordillera Administrative region      Abra     Abra   
+4  PHL  Philippines  Cordillera Administrative region      Abra     Abra   
+
+         lat         lon                   geo_id       DATES  year  ...  \
+0  17.600651  120.619362  gid_1760065101206193620  2007-01-01  2007  ...   
+1  17.600651  120.619362  gid_1760065101206193620  2007-02-01  2007  ...   
+2  17.600651  120.619362  gid_1760065101206193620  2007-03-01  2007  ...   
+3  17.600651  120.619362  gid_1760065101206193620  2007-04-01  2007  ...   
+4  17.600651  120.619362  gid_1760065101206193620  2007-05-01  2007  ...   
+
+   l_yogurt c_yogurt inflation_yogurt trust_yogurt o_food_price_index  \
+0       NaN      NaN              NaN          NaN               0.68   
+1       NaN      NaN              NaN          NaN               0.68   
+2       NaN      NaN              NaN          NaN               0.66   
+3       NaN      NaN              NaN          NaN               0.66   
+4       NaN      NaN              NaN          NaN               0.67   
+
+   h_food_price_index  l_food_price_index  c_food_price_index  \
+0                0.69                0.67                0.68   
+1                0.69                0.67                0.67   
+2                0.67                0.65                0.66   
+3                0.67                0.65                0.66   
+4                0.68                0.66                0.67   
+
+   inflation_food_price_index  trust_food_price_index  
+0                         NaN                     9.4  
+1                         NaN                     9.4  
+2                         NaN                     9.4  
+3                         NaN                     9.4  
+4                         NaN                     9.4  
+
+[5 rows x 508 columns]</code></pre>
+</div>
+</div>
+<div id="cell-3" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># View the columns and data types of the dataset</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df.info())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 23653 entries, 0 to 23652
+Columns: 508 entries, ISO3 to trust_food_price_index
+dtypes: float64(494), int64(3), object(11)
+memory usage: 91.7+ MB
+None</code></pre>
+</div>
+</div>
+<div id="cell-4" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># View the summary statistics of the dataset though this may not make sense as they are already described in the EDA report</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df.describe())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                lat           lon          year         month  data_coverage  \
+count  23436.000000  23436.000000  23653.000000  23653.000000       23653.00   
+mean      11.709358    122.876852   2015.543779      6.474654          19.34   
+std        3.640368      1.949177      5.216106      3.464248           0.00   
+min        5.029099    118.735278   2007.000000      1.000000          19.34   
+25%        8.481003    121.086142   2011.000000      3.000000          19.34   
+50%       11.570265    122.851105   2016.000000      6.000000          19.34   
+75%       14.716339    124.667869   2020.000000      9.000000          19.34   
+max       18.194082    126.207645   2025.000000     12.000000          19.34   
+
+       data_coverage_recent  index_confidence_score  spatially_interpolated  \
+count          2.365300e+04            2.365300e+04                 23653.0   
+mean           4.264000e+01            9.600000e-01                     0.0   
+std            7.105578e-15            3.330739e-16                     0.0   
+min            4.264000e+01            9.600000e-01                     0.0   
+25%            4.264000e+01            9.600000e-01                     0.0   
+50%            4.264000e+01            9.600000e-01                     0.0   
+75%            4.264000e+01            9.600000e-01                     0.0   
+max            4.264000e+01            9.600000e-01                     0.0   
+
+       apples  bananas  ...  l_yogurt  c_yogurt  inflation_yogurt  \
+count     0.0      0.0  ...       0.0       0.0               0.0   
+mean      NaN      NaN  ...       NaN       NaN               NaN   
+std       NaN      NaN  ...       NaN       NaN               NaN   
+min       NaN      NaN  ...       NaN       NaN               NaN   
+25%       NaN      NaN  ...       NaN       NaN               NaN   
+50%       NaN      NaN  ...       NaN       NaN               NaN   
+75%       NaN      NaN  ...       NaN       NaN               NaN   
+max       NaN      NaN  ...       NaN       NaN               NaN   
+
+       trust_yogurt  o_food_price_index  h_food_price_index  \
+count           0.0        23653.000000        23653.000000   
+mean            NaN            0.976953            0.994561   
+std             NaN            0.221319            0.228211   
+min             NaN            0.640000            0.650000   
+25%             NaN            0.820000            0.830000   
+50%             NaN            0.910000            0.920000   
+75%             NaN            1.070000            1.090000   
+max             NaN            1.810000            1.850000   
+
+       l_food_price_index  c_food_price_index  inflation_food_price_index  \
+count        23653.000000        23653.000000                22345.000000   
+mean             0.959457            0.977137                    4.042098   
+std              0.215228            0.223137                    6.929498   
+min              0.610000            0.640000                  -17.670000   
+25%              0.800000            0.810000                   -0.720000   
+50%              0.890000            0.900000                    3.180000   
+75%              1.050000            1.070000                    7.570000   
+max              1.740000            1.810000                   44.990000   
+
+       trust_food_price_index  
+count            23653.000000  
+mean                 9.521046  
+std                  0.183176  
+min                  9.400000  
+25%                  9.400000  
+50%                  9.400000  
+75%                  9.700000  
+max                  9.900000  
+
+[8 rows x 497 columns]</code></pre>
+</div>
+</div>
+<div id="cell-5" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Identify and drop empty columns</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>empty_columns <span class="op">=</span> df.columns[df.isnull().<span class="bu">all</span>()]  <span class="co"># Columns where all values are NaN</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Empty columns to drop: </span><span class="sc">{</span>empty_columns<span class="sc">.</span>tolist()<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Empty columns to drop: ['apples', 'bananas', 'bread', 'bulgur', 'cassava', 'cassava_flour', 'cassava_meal', 'cheese', 'chickpeas', 'chili', 'coffee_instant', 'couscous', 'cowpeas', 'cucumbers', 'dates', 'fish', 'fish_catfish', 'fish_mackerel', 'fish_sardine_canned', 'fish_tilapia', 'fish_tuna_canned', 'gari', 'groundnuts', 'lentils', 'livestock_sheep_two_year_old_male', 'livestocksheep_castrated_male', 'maize', 'maize_meal', 'meat_beef', 'meat_beef_minced', 'meat_buffalo', 'meat_chicken', 'meat_chicken_broiler', 'meat_chicken_plucked', 'meat_goat', 'meat_lamb', 'milk', 'millet', 'oil', 'oranges', 'parsley', 'pasta', 'peas', 'plantains', 'pulses', 'rice_various', 'salt', 'sesame', 'sorghum', 'sorghum_food_aid', 'sugar', 'tea', 'tomatoes_paste', 'wheat', 'wheat_flour', 'yam', 'yogurt', 'o_apples', 'h_apples', 'l_apples', 'c_apples', 'inflation_apples', 'trust_apples', 'o_bananas', 'h_bananas', 'l_bananas', 'c_bananas', 'inflation_bananas', 'trust_bananas', 'o_bread', 'h_bread', 'l_bread', 'c_bread', 'inflation_bread', 'trust_bread', 'o_bulgur', 'h_bulgur', 'l_bulgur', 'c_bulgur', 'inflation_bulgur', 'trust_bulgur', 'o_cassava', 'h_cassava', 'l_cassava', 'c_cassava', 'inflation_cassava', 'trust_cassava', 'o_cassava_flour', 'h_cassava_flour', 'l_cassava_flour', 'c_cassava_flour', 'inflation_cassava_flour', 'trust_cassava_flour', 'o_cassava_meal', 'h_cassava_meal', 'l_cassava_meal', 'c_cassava_meal', 'inflation_cassava_meal', 'trust_cassava_meal', 'o_cheese', 'h_cheese', 'l_cheese', 'c_cheese', 'inflation_cheese', 'trust_cheese', 'o_chickpeas', 'h_chickpeas', 'l_chickpeas', 'c_chickpeas', 'inflation_chickpeas', 'trust_chickpeas', 'o_chili', 'h_chili', 'l_chili', 'c_chili', 'inflation_chili', 'trust_chili', 'o_coffee_instant', 'h_coffee_instant', 'l_coffee_instant', 'c_coffee_instant', 'inflation_coffee_instant', 'trust_coffee_instant', 'o_couscous', 'h_couscous', 'l_couscous', 'c_couscous', 'inflation_couscous', 'trust_couscous', 'o_cowpeas', 'h_cowpeas', 'l_cowpeas', 'c_cowpeas', 'inflation_cowpeas', 'trust_cowpeas', 'o_cucumbers', 'h_cucumbers', 'l_cucumbers', 'c_cucumbers', 'inflation_cucumbers', 'trust_cucumbers', 'o_dates', 'h_dates', 'l_dates', 'c_dates', 'inflation_dates', 'trust_dates', 'o_fish', 'h_fish', 'l_fish', 'c_fish', 'inflation_fish', 'trust_fish', 'o_fish_catfish', 'h_fish_catfish', 'l_fish_catfish', 'c_fish_catfish', 'inflation_fish_catfish', 'trust_fish_catfish', 'o_fish_mackerel', 'h_fish_mackerel', 'l_fish_mackerel', 'c_fish_mackerel', 'inflation_fish_mackerel', 'trust_fish_mackerel', 'o_fish_sardine_canned', 'h_fish_sardine_canned', 'l_fish_sardine_canned', 'c_fish_sardine_canned', 'inflation_fish_sardine_canned', 'trust_fish_sardine_canned', 'o_fish_tilapia', 'h_fish_tilapia', 'l_fish_tilapia', 'c_fish_tilapia', 'inflation_fish_tilapia', 'trust_fish_tilapia', 'o_fish_tuna_canned', 'h_fish_tuna_canned', 'l_fish_tuna_canned', 'c_fish_tuna_canned', 'inflation_fish_tuna_canned', 'trust_fish_tuna_canned', 'o_gari', 'h_gari', 'l_gari', 'c_gari', 'inflation_gari', 'trust_gari', 'o_groundnuts', 'h_groundnuts', 'l_groundnuts', 'c_groundnuts', 'inflation_groundnuts', 'trust_groundnuts', 'o_lentils', 'h_lentils', 'l_lentils', 'c_lentils', 'inflation_lentils', 'trust_lentils', 'o_livestock_sheep_two_year_old_male', 'h_livestock_sheep_two_year_old_male', 'l_livestock_sheep_two_year_old_male', 'c_livestock_sheep_two_year_old_male', 'inflation_livestock_sheep_two_year_old_male', 'trust_livestock_sheep_two_year_old_male', 'o_livestocksheep_castrated_male', 'h_livestocksheep_castrated_male', 'l_livestocksheep_castrated_male', 'c_livestocksheep_castrated_male', 'inflation_livestocksheep_castrated_male', 'trust_livestocksheep_castrated_male', 'o_maize', 'h_maize', 'l_maize', 'c_maize', 'inflation_maize', 'trust_maize', 'o_maize_meal', 'h_maize_meal', 'l_maize_meal', 'c_maize_meal', 'inflation_maize_meal', 'trust_maize_meal', 'o_meat_beef', 'h_meat_beef', 'l_meat_beef', 'c_meat_beef', 'inflation_meat_beef', 'trust_meat_beef', 'o_meat_beef_minced', 'h_meat_beef_minced', 'l_meat_beef_minced', 'c_meat_beef_minced', 'inflation_meat_beef_minced', 'trust_meat_beef_minced', 'o_meat_buffalo', 'h_meat_buffalo', 'l_meat_buffalo', 'c_meat_buffalo', 'inflation_meat_buffalo', 'trust_meat_buffalo', 'o_meat_chicken', 'h_meat_chicken', 'l_meat_chicken', 'c_meat_chicken', 'inflation_meat_chicken', 'trust_meat_chicken', 'o_meat_chicken_broiler', 'h_meat_chicken_broiler', 'l_meat_chicken_broiler', 'c_meat_chicken_broiler', 'inflation_meat_chicken_broiler', 'trust_meat_chicken_broiler', 'o_meat_chicken_plucked', 'h_meat_chicken_plucked', 'l_meat_chicken_plucked', 'c_meat_chicken_plucked', 'inflation_meat_chicken_plucked', 'trust_meat_chicken_plucked', 'o_meat_goat', 'h_meat_goat', 'l_meat_goat', 'c_meat_goat', 'inflation_meat_goat', 'trust_meat_goat', 'o_meat_lamb', 'h_meat_lamb', 'l_meat_lamb', 'c_meat_lamb', 'inflation_meat_lamb', 'trust_meat_lamb', 'o_milk', 'h_milk', 'l_milk', 'c_milk', 'inflation_milk', 'trust_milk', 'o_millet', 'h_millet', 'l_millet', 'c_millet', 'inflation_millet', 'trust_millet', 'o_oil', 'h_oil', 'l_oil', 'c_oil', 'inflation_oil', 'trust_oil', 'o_oranges', 'h_oranges', 'l_oranges', 'c_oranges', 'inflation_oranges', 'trust_oranges', 'o_parsley', 'h_parsley', 'l_parsley', 'c_parsley', 'inflation_parsley', 'trust_parsley', 'o_pasta', 'h_pasta', 'l_pasta', 'c_pasta', 'inflation_pasta', 'trust_pasta', 'o_peas', 'h_peas', 'l_peas', 'c_peas', 'inflation_peas', 'trust_peas', 'o_plantains', 'h_plantains', 'l_plantains', 'c_plantains', 'inflation_plantains', 'trust_plantains', 'o_pulses', 'h_pulses', 'l_pulses', 'c_pulses', 'inflation_pulses', 'trust_pulses', 'o_rice_various', 'h_rice_various', 'l_rice_various', 'c_rice_various', 'inflation_rice_various', 'trust_rice_various', 'o_salt', 'h_salt', 'l_salt', 'c_salt', 'inflation_salt', 'trust_salt', 'o_sesame', 'h_sesame', 'l_sesame', 'c_sesame', 'inflation_sesame', 'trust_sesame', 'o_sorghum', 'h_sorghum', 'l_sorghum', 'c_sorghum', 'inflation_sorghum', 'trust_sorghum', 'o_sorghum_food_aid', 'h_sorghum_food_aid', 'l_sorghum_food_aid', 'c_sorghum_food_aid', 'inflation_sorghum_food_aid', 'trust_sorghum_food_aid', 'o_sugar', 'h_sugar', 'l_sugar', 'c_sugar', 'inflation_sugar', 'trust_sugar', 'o_tea', 'h_tea', 'l_tea', 'c_tea', 'inflation_tea', 'trust_tea', 'o_tomatoes_paste', 'h_tomatoes_paste', 'l_tomatoes_paste', 'c_tomatoes_paste', 'inflation_tomatoes_paste', 'trust_tomatoes_paste', 'o_wheat', 'h_wheat', 'l_wheat', 'c_wheat', 'inflation_wheat', 'trust_wheat', 'o_wheat_flour', 'h_wheat_flour', 'l_wheat_flour', 'c_wheat_flour', 'inflation_wheat_flour', 'trust_wheat_flour', 'o_yam', 'h_yam', 'l_yam', 'c_yam', 'inflation_yam', 'trust_yam', 'o_yogurt', 'h_yogurt', 'l_yogurt', 'c_yogurt', 'inflation_yogurt', 'trust_yogurt']</code></pre>
+</div>
+</div>
+<div id="cell-6" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Drop empty columns</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>df_cleaned <span class="op">=</span> df.drop(columns<span class="op">=</span>empty_columns)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-7" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the cleaned dataset</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"After Cleaning:"</span>)</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_cleaned.head())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>After Cleaning:
+  ISO3      country                         adm1_name adm2_name mkt_name  \
+0  PHL  Philippines  Cordillera Administrative region      Abra     Abra   
+1  PHL  Philippines  Cordillera Administrative region      Abra     Abra   
+2  PHL  Philippines  Cordillera Administrative region      Abra     Abra   
+3  PHL  Philippines  Cordillera Administrative region      Abra     Abra   
+4  PHL  Philippines  Cordillera Administrative region      Abra     Abra   
+
+         lat         lon                   geo_id       DATES  year  ...  \
+0  17.600651  120.619362  gid_1760065101206193620  2007-01-01  2007  ...   
+1  17.600651  120.619362  gid_1760065101206193620  2007-02-01  2007  ...   
+2  17.600651  120.619362  gid_1760065101206193620  2007-03-01  2007  ...   
+3  17.600651  120.619362  gid_1760065101206193620  2007-04-01  2007  ...   
+4  17.600651  120.619362  gid_1760065101206193620  2007-05-01  2007  ...   
+
+   l_tomatoes c_tomatoes inflation_tomatoes trust_tomatoes o_food_price_index  \
+0       26.03      27.84                NaN            8.0               0.68   
+1       26.31      26.82                NaN            8.0               0.68   
+2       24.95      26.21                NaN            8.0               0.66   
+3       24.93      26.74                NaN            8.0               0.66   
+4       26.30      27.19                NaN            8.0               0.67   
+
+   h_food_price_index  l_food_price_index  c_food_price_index  \
+0                0.69                0.67                0.68   
+1                0.69                0.67                0.67   
+2                0.67                0.65                0.66   
+3                0.67                0.65                0.66   
+4                0.68                0.66                0.67   
+
+   inflation_food_price_index  trust_food_price_index  
+0                         NaN                     9.4  
+1                         NaN                     9.4  
+2                         NaN                     9.4  
+3                         NaN                     9.4  
+4                         NaN                     9.4  
+
+[5 rows x 109 columns]</code></pre>
+</div>
+</div>
+<div id="cell-8" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Dropping unneeded columns</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>cleaned_data <span class="op">=</span> df_cleaned.drop(columns<span class="op">=</span>[<span class="st">'ISO3'</span>, <span class="st">'geo_id'</span>, <span class="st">'currency'</span>, <span class="st">'components'</span>, <span class="st">'start_dense_data'</span>, <span class="st">'last_survey_point'</span>, <span class="st">'data_coverage'</span>, <span class="st">'data_coverage_recent'</span>, <span class="st">'index_confidence_score'</span>, <span class="st">'spatially_interpolated'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-9" class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>missing_values <span class="op">=</span> cleaned_data.isnull().<span class="bu">sum</span>()</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Missing values per column:"</span>)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(missing_values)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Missing values per column:
+country                          0
+adm1_name                        0
+adm2_name                        0
+mkt_name                         0
+lat                            217
+                              ... 
+h_food_price_index               0
+l_food_price_index               0
+c_food_price_index               0
+inflation_food_price_index    1308
+trust_food_price_index           0
+Length: 99, dtype: int64</code></pre>
+</div>
+</div>
+<div id="cell-10" class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Rename multiple columns at once</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>cleaned_data.rename(columns<span class="op">=</span>{<span class="st">'DATES'</span>: <span class="st">'Date'</span>, <span class="st">'adm1_name'</span>: <span class="st">'Region'</span>, <span class="st">'adm2_name'</span>: <span class="st">'Province'</span>, <span class="st">'mkt_name'</span>: <span class="st">'City'</span>}, inplace<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-11" class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Save cleaned data to a CSV file</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>cleaned_data.to_csv(<span class="st">"cleaned_food_prices.csv"</span>, index<span class="op">=</span><span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

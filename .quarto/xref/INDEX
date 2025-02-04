@@ -1,0 +1,44 @@
+{
+  "index.qmd": {
+    "index.html": "46864ffa"
+  },
+  "about.qmd": {
+    "about.html": "adf2d10e"
+  },
+  "Analyze International Debt Statistics/notebook.ipynb": {
+    "notebook.html": "85b81da4"
+  },
+  "Analyzing Carbon Footprints/notebook.ipynb": {
+    "notebook.html": "cb24d570"
+  },
+  "Analyzing industry Carbon Emissions/notebook.ipynb": {
+    "notebook.html": "455feaac"
+  },
+  "Analyzing Motorcycle parts sale/notebook.ipynb": {
+    "notebook.html": "887e86f5"
+  },
+  "Analyzing Student's mental health/notebook.ipynb": {
+    "notebook.html": "d28134e3"
+  },
+  "DataCamp data analyst asociate practical exam/DA_Assoc_Practical_Exam.ipynb": {
+    "DA_Assoc_Practical_Exam.html": "3ee3efdd"
+  },
+  "Investigating Netflix Movies/notebook.ipynb": {
+    "notebook.html": "956a373f"
+  },
+  "Philippine_food_price_Analysis_and_Visualization/Data/External/food_prices_scraper.ipynb": {
+    "food_prices_scraper.html": "d23e111c"
+  },
+  "Philippine_food_price_Analysis_and_Visualization/Data/Interim/cleaning.ipynb": {
+    "cleaning.html": "be66f1c1"
+  },
+  "Philippine_food_price_Analysis_and_Visualization/Data/Processed/EDA.ipynb": {
+    "EDA.html": "4d696501"
+  },
+  "Philippine_food_price_Analysis_and_Visualization/Data/Processed/hypothesis_testing.ipynb": {
+    "hypothesis_testing.html": "cc325dc8"
+  },
+  "Philippine_food_price_Analysis_and_Visualization/Reports/full_report.ipynb": {
+    "full_report.html": "5692d4cc"
+  }
+}
