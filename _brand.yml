@@ -1,11 +1,11 @@
 color:
   palette:
-    violet: "#7061a6"
+    violet: "#351c75"
     light-violet: "#7061a6"
     white: "#F5F5F5"
     grey: "#6e6e73"
   background: white
-  foreground: grey
+  foreground: light-violet
   primary: violet
 
 logo: 

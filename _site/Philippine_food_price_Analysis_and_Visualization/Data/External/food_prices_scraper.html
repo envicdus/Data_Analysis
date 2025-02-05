@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>food_prices_scraper – portfolio_website</title>
+<title>food_prices_scraper – N. V. Decio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -72,7 +72,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-fad5ab29a14bbe0a7a7d29177f3f13bb.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-74b2ad7e26cd192751f09d828250f8fa.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -112,8 +112,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../../logo.png" alt="" class="navbar-logo">
+    </a>
     <a class="navbar-brand" href="../../../index.html">
-    <span class="navbar-title">portfolio_website</span>
+    <span class="navbar-title">N. V. Decio</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -121,22 +124,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <span class="nav-link">
-<span class="menu-text">N. V. Decio</span>
-    </span>
-  </li>  
-</ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
     <a class="nav-link" href="../../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <span class="nav-link">
-<span class="menu-text">Portfolios.qmd</span>
-    </span>
+    <a class="nav-link" href="../../../Portfolios.html"> 
+<span class="menu-text">Portfolio</span></a>
   </li>  
   <li class="nav-item">
     <span class="nav-link">
@@ -219,268 +214,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-3" class="cell" data-execution_count="24">
+<div id="cell-3" class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Fetch the whole dataset</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>all_data <span class="op">=</span> fetch_all_data(url, limit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Total records available: 23653
-Fetched 99 rows. Total fetched so far: 99
-Fetched 99 rows. Total fetched so far: 198
-Fetched 99 rows. Total fetched so far: 297
-Fetched 99 rows. Total fetched so far: 396
-Fetched 99 rows. Total fetched so far: 495
-Fetched 99 rows. Total fetched so far: 594
-Fetched 99 rows. Total fetched so far: 693
-Fetched 99 rows. Total fetched so far: 792
-Fetched 99 rows. Total fetched so far: 891
-Fetched 99 rows. Total fetched so far: 990
-Fetched 99 rows. Total fetched so far: 1089
-Fetched 99 rows. Total fetched so far: 1188
-Fetched 99 rows. Total fetched so far: 1287
-Fetched 99 rows. Total fetched so far: 1386
-Fetched 99 rows. Total fetched so far: 1485
-Fetched 99 rows. Total fetched so far: 1584
-Fetched 99 rows. Total fetched so far: 1683
-Fetched 99 rows. Total fetched so far: 1782
-Fetched 99 rows. Total fetched so far: 1881
-Fetched 99 rows. Total fetched so far: 1980
-Fetched 99 rows. Total fetched so far: 2079
-Fetched 99 rows. Total fetched so far: 2178
-Fetched 99 rows. Total fetched so far: 2277
-Fetched 99 rows. Total fetched so far: 2376
-Fetched 99 rows. Total fetched so far: 2475
-Fetched 99 rows. Total fetched so far: 2574
-Fetched 99 rows. Total fetched so far: 2673
-Fetched 99 rows. Total fetched so far: 2772
-Fetched 99 rows. Total fetched so far: 2871
-Fetched 99 rows. Total fetched so far: 2970
-Fetched 99 rows. Total fetched so far: 3069
-Fetched 99 rows. Total fetched so far: 3168
-Fetched 99 rows. Total fetched so far: 3267
-Fetched 99 rows. Total fetched so far: 3366
-Fetched 99 rows. Total fetched so far: 3465
-Fetched 99 rows. Total fetched so far: 3564
-Fetched 99 rows. Total fetched so far: 3663
-Fetched 99 rows. Total fetched so far: 3762
-Fetched 99 rows. Total fetched so far: 3861
-Fetched 99 rows. Total fetched so far: 3960
-Fetched 99 rows. Total fetched so far: 4059
-Fetched 99 rows. Total fetched so far: 4158
-Fetched 99 rows. Total fetched so far: 4257
-Fetched 99 rows. Total fetched so far: 4356
-Fetched 99 rows. Total fetched so far: 4455
-Fetched 99 rows. Total fetched so far: 4554
-Fetched 99 rows. Total fetched so far: 4653
-Fetched 99 rows. Total fetched so far: 4752
-Fetched 99 rows. Total fetched so far: 4851
-Fetched 99 rows. Total fetched so far: 4950
-Fetched 99 rows. Total fetched so far: 5049
-Fetched 99 rows. Total fetched so far: 5148
-Fetched 99 rows. Total fetched so far: 5247
-Fetched 99 rows. Total fetched so far: 5346
-Fetched 99 rows. Total fetched so far: 5445
-Fetched 99 rows. Total fetched so far: 5544
-Fetched 99 rows. Total fetched so far: 5643
-Fetched 99 rows. Total fetched so far: 5742
-Fetched 99 rows. Total fetched so far: 5841
-Fetched 99 rows. Total fetched so far: 5940
-Fetched 99 rows. Total fetched so far: 6039
-Fetched 99 rows. Total fetched so far: 6138
-Fetched 99 rows. Total fetched so far: 6237
-Fetched 99 rows. Total fetched so far: 6336
-Fetched 99 rows. Total fetched so far: 6435
-Fetched 99 rows. Total fetched so far: 6534
-Fetched 99 rows. Total fetched so far: 6633
-Fetched 99 rows. Total fetched so far: 6732
-Fetched 99 rows. Total fetched so far: 6831
-Fetched 99 rows. Total fetched so far: 6930
-Fetched 99 rows. Total fetched so far: 7029
-Fetched 99 rows. Total fetched so far: 7128
-Fetched 99 rows. Total fetched so far: 7227
-Fetched 99 rows. Total fetched so far: 7326
-Fetched 99 rows. Total fetched so far: 7425
-Fetched 99 rows. Total fetched so far: 7524
-Fetched 99 rows. Total fetched so far: 7623
-Fetched 99 rows. Total fetched so far: 7722
-Fetched 99 rows. Total fetched so far: 7821
-Fetched 99 rows. Total fetched so far: 7920
-Fetched 99 rows. Total fetched so far: 8019
-Fetched 99 rows. Total fetched so far: 8118
-Fetched 99 rows. Total fetched so far: 8217
-Fetched 99 rows. Total fetched so far: 8316
-Fetched 99 rows. Total fetched so far: 8415
-Fetched 99 rows. Total fetched so far: 8514
-Fetched 99 rows. Total fetched so far: 8613
-Fetched 99 rows. Total fetched so far: 8712
-Fetched 99 rows. Total fetched so far: 8811
-Fetched 99 rows. Total fetched so far: 8910
-Fetched 99 rows. Total fetched so far: 9009
-Fetched 99 rows. Total fetched so far: 9108
-Fetched 99 rows. Total fetched so far: 9207
-Fetched 99 rows. Total fetched so far: 9306
-Fetched 99 rows. Total fetched so far: 9405
-Fetched 99 rows. Total fetched so far: 9504
-Fetched 99 rows. Total fetched so far: 9603
-Fetched 99 rows. Total fetched so far: 9702
-Fetched 99 rows. Total fetched so far: 9801
-Fetched 99 rows. Total fetched so far: 9900
-Fetched 99 rows. Total fetched so far: 9999
-Fetched 99 rows. Total fetched so far: 10098
-Fetched 99 rows. Total fetched so far: 10197
-Fetched 99 rows. Total fetched so far: 10296
-Fetched 99 rows. Total fetched so far: 10395
-Fetched 99 rows. Total fetched so far: 10494
-Fetched 99 rows. Total fetched so far: 10593
-Fetched 99 rows. Total fetched so far: 10692
-Fetched 99 rows. Total fetched so far: 10791
-Fetched 99 rows. Total fetched so far: 10890
-Fetched 99 rows. Total fetched so far: 10989
-Fetched 99 rows. Total fetched so far: 11088
-Fetched 99 rows. Total fetched so far: 11187
-Fetched 99 rows. Total fetched so far: 11286
-Fetched 99 rows. Total fetched so far: 11385
-Fetched 99 rows. Total fetched so far: 11484
-Fetched 99 rows. Total fetched so far: 11583
-Fetched 99 rows. Total fetched so far: 11682
-Fetched 99 rows. Total fetched so far: 11781
-Fetched 99 rows. Total fetched so far: 11880
-Fetched 99 rows. Total fetched so far: 11979
-Fetched 99 rows. Total fetched so far: 12078
-Fetched 99 rows. Total fetched so far: 12177
-Fetched 99 rows. Total fetched so far: 12276
-Fetched 99 rows. Total fetched so far: 12375
-Fetched 99 rows. Total fetched so far: 12474
-Fetched 99 rows. Total fetched so far: 12573
-Fetched 99 rows. Total fetched so far: 12672
-Fetched 99 rows. Total fetched so far: 12771
-Fetched 99 rows. Total fetched so far: 12870
-Fetched 99 rows. Total fetched so far: 12969
-Fetched 99 rows. Total fetched so far: 13068
-Fetched 99 rows. Total fetched so far: 13167
-Fetched 99 rows. Total fetched so far: 13266
-Fetched 99 rows. Total fetched so far: 13365
-Fetched 99 rows. Total fetched so far: 13464
-Fetched 99 rows. Total fetched so far: 13563
-Fetched 99 rows. Total fetched so far: 13662
-Fetched 99 rows. Total fetched so far: 13761
-Fetched 99 rows. Total fetched so far: 13860
-Fetched 99 rows. Total fetched so far: 13959
-Fetched 99 rows. Total fetched so far: 14058
-Fetched 99 rows. Total fetched so far: 14157
-Fetched 99 rows. Total fetched so far: 14256
-Fetched 99 rows. Total fetched so far: 14355
-Fetched 99 rows. Total fetched so far: 14454
-Fetched 99 rows. Total fetched so far: 14553
-Fetched 99 rows. Total fetched so far: 14652
-Fetched 99 rows. Total fetched so far: 14751
-Fetched 99 rows. Total fetched so far: 14850
-Fetched 99 rows. Total fetched so far: 14949
-Fetched 99 rows. Total fetched so far: 15048
-Fetched 99 rows. Total fetched so far: 15147
-Fetched 99 rows. Total fetched so far: 15246
-Fetched 99 rows. Total fetched so far: 15345
-Fetched 99 rows. Total fetched so far: 15444
-Fetched 99 rows. Total fetched so far: 15543
-Fetched 99 rows. Total fetched so far: 15642
-Fetched 99 rows. Total fetched so far: 15741
-Fetched 99 rows. Total fetched so far: 15840
-Fetched 99 rows. Total fetched so far: 15939
-Fetched 99 rows. Total fetched so far: 16038
-Fetched 99 rows. Total fetched so far: 16137
-Fetched 99 rows. Total fetched so far: 16236
-Fetched 99 rows. Total fetched so far: 16335
-Fetched 99 rows. Total fetched so far: 16434
-Fetched 99 rows. Total fetched so far: 16533
-Fetched 99 rows. Total fetched so far: 16632
-Fetched 99 rows. Total fetched so far: 16731
-Fetched 99 rows. Total fetched so far: 16830
-Fetched 99 rows. Total fetched so far: 16929
-Fetched 99 rows. Total fetched so far: 17028
-Fetched 99 rows. Total fetched so far: 17127
-Fetched 99 rows. Total fetched so far: 17226
-Fetched 99 rows. Total fetched so far: 17325
-Fetched 99 rows. Total fetched so far: 17424
-Fetched 99 rows. Total fetched so far: 17523
-Fetched 99 rows. Total fetched so far: 17622
-Fetched 99 rows. Total fetched so far: 17721
-Fetched 99 rows. Total fetched so far: 17820
-Fetched 99 rows. Total fetched so far: 17919
-Fetched 99 rows. Total fetched so far: 18018
-Fetched 99 rows. Total fetched so far: 18117
-Fetched 99 rows. Total fetched so far: 18216
-Fetched 99 rows. Total fetched so far: 18315
-Fetched 99 rows. Total fetched so far: 18414
-Fetched 99 rows. Total fetched so far: 18513
-Fetched 99 rows. Total fetched so far: 18612
-Fetched 99 rows. Total fetched so far: 18711
-Fetched 99 rows. Total fetched so far: 18810
-Fetched 99 rows. Total fetched so far: 18909
-Fetched 99 rows. Total fetched so far: 19008
-Fetched 99 rows. Total fetched so far: 19107
-Fetched 99 rows. Total fetched so far: 19206
-Fetched 99 rows. Total fetched so far: 19305
-Fetched 99 rows. Total fetched so far: 19404
-Fetched 99 rows. Total fetched so far: 19503
-Fetched 99 rows. Total fetched so far: 19602
-Fetched 99 rows. Total fetched so far: 19701
-Fetched 99 rows. Total fetched so far: 19800
-Fetched 99 rows. Total fetched so far: 19899
-Fetched 99 rows. Total fetched so far: 19998
-Fetched 99 rows. Total fetched so far: 20097
-Fetched 99 rows. Total fetched so far: 20196
-Fetched 99 rows. Total fetched so far: 20295
-Fetched 99 rows. Total fetched so far: 20394
-Fetched 99 rows. Total fetched so far: 20493
-Fetched 99 rows. Total fetched so far: 20592
-Fetched 99 rows. Total fetched so far: 20691
-Fetched 99 rows. Total fetched so far: 20790
-Fetched 99 rows. Total fetched so far: 20889
-Fetched 99 rows. Total fetched so far: 20988
-Fetched 99 rows. Total fetched so far: 21087
-Fetched 99 rows. Total fetched so far: 21186
-Fetched 99 rows. Total fetched so far: 21285
-Fetched 99 rows. Total fetched so far: 21384
-Fetched 99 rows. Total fetched so far: 21483
-Fetched 99 rows. Total fetched so far: 21582
-Fetched 99 rows. Total fetched so far: 21681
-Fetched 99 rows. Total fetched so far: 21780
-Fetched 99 rows. Total fetched so far: 21879
-Fetched 99 rows. Total fetched so far: 21978
-Fetched 99 rows. Total fetched so far: 22077
-Fetched 99 rows. Total fetched so far: 22176
-Fetched 99 rows. Total fetched so far: 22275
-Fetched 99 rows. Total fetched so far: 22374
-Fetched 99 rows. Total fetched so far: 22473
-Fetched 99 rows. Total fetched so far: 22572
-Fetched 99 rows. Total fetched so far: 22671
-Fetched 99 rows. Total fetched so far: 22770
-Fetched 99 rows. Total fetched so far: 22869
-Fetched 99 rows. Total fetched so far: 22968
-Fetched 99 rows. Total fetched so far: 23067
-Fetched 99 rows. Total fetched so far: 23166
-Fetched 99 rows. Total fetched so far: 23265
-Fetched 99 rows. Total fetched so far: 23364
-Fetched 99 rows. Total fetched so far: 23463
-Fetched 99 rows. Total fetched so far: 23562
-Fetched 91 rows. Total fetched so far: 23653
-Fetched all available records.</code></pre>
 </div>
+<div id="cell-4" class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert to a DataFrame</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame(all_data)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Total rows fetched: </span><span class="sc">{</span><span class="bu">len</span>(df)<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-4" class="cell" data-execution_count="25">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert to a DataFrame</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame(all_data)</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Total rows fetched: </span><span class="sc">{</span><span class="bu">len</span>(df)<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Total rows fetched: 23653</code></pre>
-</div>
-</div>
-<div id="cell-5" class="cell" data-execution_count="26">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Save to CSV</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>df.to_csv(<span class="st">'full_dataset.csv'</span>, index<span class="op">=</span><span class="va">False</span>)</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"All data saved to full_dataset.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>All data saved to full_dataset.csv</code></pre>
-</div>
+<div id="cell-5" class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Save to CSV</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>df.to_csv(<span class="st">'full_dataset.csv'</span>, index<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"All data saved to full_dataset.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 

@@ -17,9 +17,7 @@ website:
 format:
   html:
     theme:
-      light: [united, brand]
-      dark: [united, theme-dark.scss]
-      - brand
+      light: brand
     css: styles.css
     toc: true
     
