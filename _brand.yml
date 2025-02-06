@@ -8,8 +8,6 @@ color:
   foreground: light-violet
   primary: violet
 
-logo: 
-  medium: logo.png
 
 typography:
   fonts:

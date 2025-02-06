@@ -5,8 +5,8 @@ css: styles.css
 ---
 
 1. Philippine Food Price Analysis and Visualization
-Project link: https://github.com/envicdus/Data_Analysis/tree/main/Philippine_food_price_Analysis_and_Visualization
-Full Report : 
+Project link: [Click Here](https://github.com/envicdus/Data_Analysis/tree/main/Philippine_food_price_Analysis_and_Visualization)
+Full Report : [Click Here](_site\Philippine_food_price_Analysis_and_Visualization\Reports\full_report.html)
 
 Goal: To Analyze food price variations across different regions and time periods
 
