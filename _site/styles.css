@@ -14,3 +14,8 @@
 .white {
     color: #F5F5F5;
 }
+.navbar-search input {
+
+    background-color: #6e6e73; /* Replace with your desired color hex code */
+
+}
