@@ -1,21 +1,5 @@
-/* css styles */
-.violet {
-    color: #351c75;
-}
+/*-- scss:defaults --*/
 
-.light-violet {
-    color: #7061a6;
-}
-
-.gray {
-    color: #6e6e73;
-}
-
-.white {
-    color: #F5F5F5;
-}
-.navbar-search input {
-
-    background-color: #6e6e73; /* Replace with your desired color hex code */
-
+.sidebar {
+    width: 300px; /* Adjust as needed */
 }

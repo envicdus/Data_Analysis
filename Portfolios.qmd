@@ -1,24 +1,30 @@
 ---
 Author: "Neil Vince Decio"
 title: "Portfolio"
-css: styles.css
 ---
 
-1. Philippine Food Price Analysis and Visualization
-Project link: [Click Here](https://github.com/envicdus/Data_Analysis/tree/main/Philippine_food_price_Analysis_and_Visualization)
-Full Report : [Click Here](_site\Philippine_food_price_Analysis_and_Visualization\Reports\full_report.html)
-
-Goal: To Analyze food price variations across different regions and time periods
-
-Description: The main objectives include comparing average prices of the same food item across regions within a given year, examining historical price trends of specific food items within a region, and identifying regional price variations for different food items. Additionally, the project aims to develop predictive models to forecast future food prices based on historical data. Through these analyses, the project seeks to provide insights into regional pricing patterns and potential future trends in food costs.
-
-Skills: Data scraping/mining, Data Cleaning, Data Analysis, correlation matrices, hypothesis testing, Machine learning
-
-Technologies: python, Pandas, Numpy, Scipy, Seaborn, Plotly, Pmdarima, Dash
-
-Results: The analysis revealed significant regional price differences, historical trends, and future projections of food prices, providing insights into market dynamics.
-
-2. 
+## 1. Philippine Food Price Analysis and Visualization<br>
+**Project link**: [Click Here](https://github.com/envicdus/Data_Analysis/tree/main/Philippine_food_price_Analysis_and_Visualization)<br>
+**Full Analysis**: [Click Here](_site\Philippine_food_price_Analysis_and_Visualization\Reports\full_report.html)<br>
+**Documentation**: [Click Here](https://github.com/envicdus/Data_Analysis/blob/main/Philippine_food_price_Analysis_and_Visualization/README.md)
+\
+\
+**Goal**: To Analyze food price variations across different regions and time periods
+\
+\
+**Description**: The main objectives include comparing average prices of the same food item across regions within a given year, examining historical price trends of specific food items within a region, and identifying regional price variations for different food items. Additionally, the project aims to develop predictive models to forecast future food prices based on historical data. Through these analyses, the project seeks to provide insights into regional pricing patterns and potential future trends in food costs.
+\
+\
+**Skills**: Data scraping/mining, Data Cleaning, Data Analysis, correlation matrices, hypothesis testing, Machine learning
+\
+\
+**Technologies**: python, Pandas, Numpy, Scipy, Seaborn, Plotly, Pmdarima
+\
+\
+**Results**: The analysis revealed significant regional price differences, historical trends, and future projections of food prices, providing insights into market dynamics.
+\
+\
+## 2. 
 
 Goal: 
 

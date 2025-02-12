@@ -1,6 +1,10 @@
 project:
   type: website
 
+jupyter:
+  execute:
+    execute_notebooks: false
+
 website:
   title: "N. V. Decio"
   navbar:
@@ -8,16 +12,31 @@ website:
     search: true
 
     right:
-      - text: "Home"
-        href: index.qmd
+      - href: index.qmd
+        text: Home
       - Portfolios.qmd
       - Trainings.qmd
       - Resume.qmd 
+  page-footer: 
+    left: "Copyright 2025, Neil Vince Decio" 
+    right: 
+      - icon: github
+        href: https://github.com/envicdus/Data_Analysis/tree/main
+      - icon: linkedin
+        href: https://www.linkedin.com/in/nvddecio/ 
+  back-to-top-navigation: true
+
+
 
 format:
   html:
+    grid:
+      sidebar-width: 0px
+      body-width: 1100px
+      margin-width: 200px
     theme:
-      light: flatly
       dark: darkly
+      light: flatly
+
     toc: true
     

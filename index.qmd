@@ -1,7 +1,6 @@
 ---
 Author: "Neil Vince Decio"
 title: "My Portfolio"
-css: styles.css
 ---
 
 
