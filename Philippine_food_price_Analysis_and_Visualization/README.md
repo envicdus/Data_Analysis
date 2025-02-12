@@ -12,7 +12,7 @@ This project analyzes food price trends in the Philippines using Python. It invo
 
 
 ## Data & Sources
-- Data is sourced from publicly available datasets from (Worldbank.org)[https://microdata.worldbank.org/index.php/home]
+- Data is sourced from publicly available datasets from [(]Worldbank.org](https://microdata.worldbank.org/index.php/home)
 - The dataset includes food prices over different time periods.
 
 ## Project Structure
@@ -42,7 +42,14 @@ This project analyzes food price trends in the Philippines using Python. It invo
 ```
 
 ## Metadata of the scraped dataset
-- Please refer to this (link)[https://microdata.worldbank.org/index.php/catalog/6172/data-dictionary/PHL_2021_RTFP_MKT?file_name=PHL_RTFP_mkt_2007_2025-01-27.csv]
+- Please refer to this [link](https://microdata.worldbank.org/index.php/catalog/6172/data-dictionary/PHL_2021_RTFP_MKT?file_name=PHL_RTFP_mkt_2007_2025-01-27.csv)
+
+## Flow of the Project
+1. Scraped the dataset from a website (see Data/External).
+2. Cleaned the data by removing unnecessary columns (see Data/Interim).
+3. Conducted data analysis, beginning with central tendencies, followed by dispersion measures, and concluding with forecasting(see (see Data/Processed).
+4. Compiled all analyses and generated a comprehensive report (see Reports).
+5. Created visual reports using Power BI and Tableau (see Reports).
 
 ## Future Improvements
 - Implement machine learning models for price prediction
