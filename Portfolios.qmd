@@ -1,12 +1,14 @@
 ---
 Author: "Neil Vince Decio"
 title: "Portfolio"
+
 ---
 
-## 1. Philippine Food Price Analysis and Visualization<br>
+##  Philippine Food Price Analysis and Visualization<br>
 **Project link**: [Click Here](https://github.com/envicdus/Data_Analysis/tree/main/Philippine_food_price_Analysis_and_Visualization)<br>
 **Full Analysis**: [Click Here](_site\Philippine_food_price_Analysis_and_Visualization\Reports\full_report.html)<br>
 **Documentation**: [Click Here](https://github.com/envicdus/Data_Analysis/blob/main/Philippine_food_price_Analysis_and_Visualization/README.md)
+**Viz** : [Tableau](https://public.tableau.com/views/PhilippineFoodPriceAnalysisandDashboard/foodpricedashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link), [PowerBI](https://github.com/envicdus/Data_Analysis/tree/main/Philippine_food_price_Analysis_and_Visualization/Reports/PowerBI)
 \
 \
 **Goal**: To Analyze food price variations across different regions and time periods
@@ -24,18 +26,27 @@ title: "Portfolio"
 **Results**: The analysis revealed significant regional price differences, historical trends, and future projections of food prices, providing insights into market dynamics.
 \
 \
-## 2. 
-
-Goal: 
-
-Description: 
-
-Skills: 
-
-Technologies: 
-
-Results: 
-
+## (@). Investigating Netflx Movies
+**Project link**: [Click Here]()<br>
+**Full Analysis**: [Click Here](_site\Philippine_food_price_Analysis_and_Visualization\Reports\full_report.html)<br>
+**Documentation**: [Click Here]()
+\
+\
+Goal:  to determine whether movie lengths are actually getting shorter and explain some of the contributing factors.
+\
+\
+Description: Given the large number of movies and series available on the platform, It’s a perfect opportunity for me to flex my exploratory data analysis skills and dive into the entertainment industry. I’ve also been brushing up on my Python skills and have taken an initial look at a CSV file containing Netflix data. I believe that the average duration of movies has been declining. Using my initial research, I’ll delve into the Netflix data to determine whether movie lengths are actually getting shorter and explain some of the contributing factors, if any.
+\
+\
+Skills: Data Cleaning, Data Analysis
+\
+\
+Technologies: python, Pandas, Matplotlib
+\
+\
+Results: The result of the analysis is uncertain.
+\
+\
 3. 
 
 Goal: 
