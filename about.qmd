@@ -1,5 +1,29 @@
 ---
-title: "About"
+title: "Neil Vince Decio"
+about:
+  template: Broadside
+  image: profile.jpg
+  links:
+    - icon: twitter
+      text: twitter
+      href: https://twitter.com
+    - icon: github
+      text: Github
+      href: https://github.com
 ---
 
-About this site
+Finley Malloc is a PRC Registered Chemist and currently learning Data Science/Data Analysis. When not innovating on data platforms, Neil enjoys spending time reading books and novel, watching tv shows and movies, learning new language, and playing games.
+
+## Education
+
+Polytechnic University of the Philippines, Sta. Mesa | Manila, Metro Manila
+BS in Chemistry | June 2010 - April 2014
+
+
+## Experience
+
+Cavite State University | Instructor I | Jan 2019 - June 2021
+
+DOST-ITDI-Material Science Division | Research Assistant II | Feb 2017 - Sept. 2017
+
+EBAR Abstracting Company Inc | Information Analyst | Jan 2015 - Mar 2016
