@@ -16,7 +16,7 @@ website:
         text: Home
       - Portfolios.qmd
       - Trainings.qmd
-      - Resume.qmd 
+      - about.qmd 
   page-footer: 
     left: "Copyright 2025, Neil Vince Decio" 
     right: 
@@ -41,4 +41,4 @@ format:
     toc: true
     
 execute:
-  freeze: auto
+  freeze: True

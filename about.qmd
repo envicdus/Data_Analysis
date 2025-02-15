@@ -1,22 +1,27 @@
 ---
-title: "Neil Vince Decio"
+title: "About Me"
 about:
-  template: Broadside
-  image: profile.jpg
+  template: broadside
+  image-width: 10em
+  image-shape: round
+  image: Images/profile.jpg
   links:
-    - icon: twitter
-      text: twitter
-      href: https://twitter.com
+    - icon: linkedin
+      text: linkedin
+      href: https://www.linkedin.com/in/nvddecio/ 
     - icon: github
       text: Github
-      href: https://github.com
+      href: https://github.com/envicdus/Data_Analysis/tree/main
+echo: false
+warning: false
 ---
 
-Finley Malloc is a PRC Registered Chemist and currently learning Data Science/Data Analysis. When not innovating on data platforms, Neil enjoys spending time reading books and novel, watching tv shows and movies, learning new language, and playing games.
+Neil Vince Decio is a PRC Registered Chemist and currently learning Data Science/Data Analysis. When not innovating on data platforms, Neil enjoys spending time reading books and novel, watching tv shows and movies, learning new language, and playing games.
 
 ## Education
 
 Polytechnic University of the Philippines, Sta. Mesa | Manila, Metro Manila
+
 BS in Chemistry | June 2010 - April 2014
 
 
