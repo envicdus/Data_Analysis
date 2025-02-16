@@ -27,106 +27,163 @@ title: "Portfolio"
 \
 \
 ## Investigating Netflx Movies<br>
+**Project link**: [Click Here](https://github.com/envicdus/Data_Analysis/tree/main/Investigating%20Netflix%20Movies)<br>
+**Full Analysis**: [Click Here](_site\Investigating Netflix Movies\notebook.html)<br>
+
+\
+\
+**Goal**:  to determine whether movie lengths are actually getting shorter and explain some of the contributing factors.
+\
+\
+**Description**: Given the large number of movies and series available on the platform, It’s a perfect opportunity for me to flex my exploratory data analysis skills and dive into the entertainment industry. I’ve also been brushing up on my Python skills and have taken an initial look at a CSV file containing Netflix data. I believe that the average duration of movies has been declining. Using my initial research, I’ll delve into the Netflix data to determine whether movie lengths are actually getting shorter and explain some of the contributing factors, if any.
+\
+\
+**Skills**: Data Cleaning, Data Analysis, Data Visualization, EDA
+\
+\
+**Technologies**: python, Pandas, Matplotlib
+\
+\
+**Results**: The result of the analysis is uncertain.
+\
+\
+## International Debt Statistics Analysis<br>
+**Project link**: [Click Here](https://github.com/envicdus/Data_Analysis/tree/main/Analyze%20International%20Debt%20Statistics)<br>
+**Full Analysis**: [Click Here](_site\Analyze International Debt Statistics\notebook.html)<br>
+\
+\
+**Goal**: Analyzing International Debt Data: Understanding the Total Debt, Maximum Debt by Country, and Average Debt Across Indicators.
+\
+\
+**Description**: This notebook explores the World Bank's international debt dataset to uncover key trends and patterns, including total debt, country-specific debt, and average debt by indicator.
+\
+\
+**Skills**: Data Wrangling, Data Analysis, EDA, Data Interpretation
+\
+\
+**Technologies**: Python, Pandas, sqlite3, sql, jupysql
+\
+\
+**Results**: This analysis reveals that debt structures vary significantly by country, reflecting distinct economic strategies. Developed economies, such as Brazil, Mexico, and China, rely more on private creditors, bonds, and market-based financing, whereas least developed countries depend on bilateral and official loans from international institutions. Notably, interest payments pose a significant risk to countries like Mexico and China, requiring careful budget management to maintain financial stability. Furthermore, countries that rely on private creditors or bond markets face higher risks due to market volatility, interest rate hikes, and investor sentiment. Overall, these findings highlight the importance of understanding country-specific debt structures and the associated risks to inform economic policy and decision-making.
+\
+\
+## title<br>
 **Project link**: [Click Here]()<br>
-**Full Analysis**: [Click Here](_site\Philippine_food_price_Analysis_and_Visualization\Reports\full_report.html)<br>
-**Documentation**: [Click Here]()
+**Full Analysis**: [Click Here]()<br>
 \
 \
-Goal:  to determine whether movie lengths are actually getting shorter and explain some of the contributing factors.
+**Goal**: 
 \
 \
-Description: Given the large number of movies and series available on the platform, It’s a perfect opportunity for me to flex my exploratory data analysis skills and dive into the entertainment industry. I’ve also been brushing up on my Python skills and have taken an initial look at a CSV file containing Netflix data. I believe that the average duration of movies has been declining. Using my initial research, I’ll delve into the Netflix data to determine whether movie lengths are actually getting shorter and explain some of the contributing factors, if any.
+**Description**: 
 \
 \
-Skills: Data Cleaning, Data Analysis
+**Skills**: 
 \
 \
-Technologies: python, Pandas, Matplotlib
+**Technologies**: 
 \
 \
-Results: The result of the analysis is uncertain.
+**Results**: 
 \
 \
-3. 
-
-Goal: 
-
-Description: 
-
-Skills: 
-
-Technologies: 
-
-Results: 
-
-4. 
-
-Goal: 
-
-Description: 
-
-Skills: 
-
-Technologies: 
-
-Results: 
-
-5. 
-
-Goal: 
-
-Description: 
-
-Skills: 
-
-Technologies: 
-
-Results: 
-
-6. 
-
-Goal: 
-
-Description: 
-
-Skills: 
-
-Technologies: 
-
-Results: 
-
-7. 
-
-Goal: 
-
-Description: 
-
-Skills: 
-
-Technologies: 
-
-Results: 
-
-8. 
-
-Goal: 
-
-Description: 
-
-Skills: 
-
-Technologies: 
-
-Results: 
-
-9. 
-
-Goal: 
-
-Description: 
-
-Skills: 
-
-Technologies: 
-
-Results: 
+## title<br>
+**Project link**: [Click Here]()<br>
+**Full Analysis**: [Click Here]()<br>
+\
+\
+**Goal**: 
+\
+\
+**Description**: 
+\
+\
+**Skills**: 
+\
+\
+**Technologies**: 
+\
+\
+**Results**: 
+\
+\
+## title<br>
+**Project link**: [Click Here]()<br>
+**Full Analysis**: [Click Here]()<br>
+\
+\
+**Goal**: 
+\
+\
+**Description**: 
+\
+\
+**Skills**: 
+\
+\
+**Technologies**: 
+\
+\
+**Results**: 
+\
+\
+## title<br>
+**Project link**: [Click Here]()<br>
+**Full Analysis**: [Click Here]()<br>
+\
+\
+**Goal**: 
+\
+\
+**Description**: 
+\
+\
+**Skills**: 
+\
+\
+**Technologies**: 
+\
+\
+**Results**: 
+\
+\
+## title<br>
+**Project link**: [Click Here]()<br>
+**Full Analysis**: [Click Here]()<br>
+\
+\
+**Goal**: 
+\
+\
+**Description**: 
+\
+\
+**Skills**: 
+\
+\
+**Technologies**: 
+\
+\
+**Results**: 
+\
+\
+## title<br>
+**Project link**: [Click Here]()<br>
+**Full Analysis**: [Click Here]()<br>
+\
+\
+**Goal**: 
+\
+\
+**Description**: 
+\
+\
+**Skills**: 
+\
+\
+**Technologies**: 
+\
+\
+**Results**: 
+\
+\
