@@ -1,13 +1,13 @@
 ---
 Author: "Neil Vince Decio"
-title: "Portfolio"
-
+Title: "Portfolio"
 ---
+# Portfolio Project List
 
-##  Philippine Food Price Analysis and Visualization<br>
+##  Philippine Food Price Analysis and Visualization
 **Project link**: [Click Here](https://github.com/envicdus/Data_Analysis/tree/main/Philippine_food_price_Analysis_and_Visualization)<br>
 **Full Analysis**: [Click Here](_site\Philippine_food_price_Analysis_and_Visualization\Reports\full_report.html)<br>
-**Documentation**: [Click Here](https://github.com/envicdus/Data_Analysis/blob/main/Philippine_food_price_Analysis_and_Visualization/README.md)
+**Documentation**: [Click Here](https://github.com/envicdus/Data_Analysis/blob/main/Philippine_food_price_Analysis_and_Visualization/README.md)<br>
 **Viz** : [Tableau](https://public.tableau.com/views/PhilippineFoodPriceAnalysisandDashboard/foodpricedashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link), [PowerBI](https://github.com/envicdus/Data_Analysis/tree/main/Philippine_food_price_Analysis_and_Visualization/Reports/PowerBI)
 \
 \
@@ -24,9 +24,9 @@ title: "Portfolio"
 \
 \
 **Results**: The analysis revealed significant regional price differences, historical trends, and future projections of food prices, providing insights into market dynamics.
-\
-\
-## Investigating Netflx Movies<br>
+
+## Investigating Netflx Movies
+
 **Project link**: [Click Here](https://github.com/envicdus/Data_Analysis/tree/main/Investigating%20Netflix%20Movies)<br>
 **Full Analysis**: [Click Here](_site\Investigating Netflix Movies\notebook.html)<br>
 
@@ -45,9 +45,9 @@ title: "Portfolio"
 \
 \
 **Results**: The result of the analysis is uncertain.
-\
-\
-## International Debt Statistics Analysis<br>
+
+## International Debt Statistics Analysis
+
 **Project link**: [Click Here](https://github.com/envicdus/Data_Analysis/tree/main/Analyze%20International%20Debt%20Statistics)<br>
 **Full Analysis**: [Click Here](_site\Analyze International Debt Statistics\notebook.html)<br>
 \
@@ -65,9 +65,9 @@ title: "Portfolio"
 \
 \
 **Results**: This analysis reveals that debt structures vary significantly by country, reflecting distinct economic strategies. Developed economies, such as Brazil, Mexico, and China, rely more on private creditors, bonds, and market-based financing, whereas least developed countries depend on bilateral and official loans from international institutions. Notably, interest payments pose a significant risk to countries like Mexico and China, requiring careful budget management to maintain financial stability. Furthermore, countries that rely on private creditors or bond markets face higher risks due to market volatility, interest rate hikes, and investor sentiment. Overall, these findings highlight the importance of understanding country-specific debt structures and the associated risks to inform economic policy and decision-making.
-\
-\
-## title<br>
+
+
+## Carbon Footprint Analysis<br>
 **Project link**: [Click Here]()<br>
 **Full Analysis**: [Click Here]()<br>
 \
