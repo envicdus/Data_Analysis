@@ -1,0 +1,8 @@
+/.quarto/
+/_site/
+/.ipynb_checkpoints/
+/index_files/
+/.venv/
+
+# ignore all .qmd files
+*.qmd

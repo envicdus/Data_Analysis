@@ -14,8 +14,10 @@ website:
     right:
       - href: index.qmd
         text: Home
-      - Portfolios.qmd
-      - Trainings.qmd
+      - href: Portfolios.qmd
+        text: Portfolio
+      - href: Trainings.qmd
+        text: Trainings
       - about.qmd 
   page-footer: 
     left: "Copyright 2025, Neil Vince Decio" 

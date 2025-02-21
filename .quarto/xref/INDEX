@@ -52,5 +52,14 @@
   },
   "Philippine_food_price_Analysis_and_Visualization/Reports/forecast.ipynb": {
     "forecast.html": "64e0ef4d"
+  },
+  "covid mortality and vaccination project/notebooks/cleaning_and_processing.ipynb": {
+    "cleaning_and_processing.html": "d9d524a2"
+  },
+  "covid mortality and vaccination project/notebooks/Report.ipynb": {
+    "Report.html": "bf01e65c"
+  },
+  "covid mortality and vaccination project/notebooks/scraper_covid.ipynb": {
+    "scraper_covid.html": "0bde216e"
   }
 }

@@ -68,122 +68,57 @@ Title: "Portfolio"
 
 
 ## Carbon Footprint Analysis<br>
-**Project link**: [Click Here]()<br>
-**Full Analysis**: [Click Here]()<br>
+**Project link**: [Click Here](https://github.com/envicdus/Data_Analysis/tree/main/Analyzing%20Carbon%20Footprints)<br>
+**Full Analysis**: [Click Here](_site\Analyzing Carbon Footprints\notebook.html)<br>
 \
 \
-**Goal**: 
+**Goal**: Analyze carbon dioxide emissions of various countries and understand why they have those numbers in the data.
 \
 \
-**Description**: 
+**Description**: Product emissions make up more than 75% of global emissions. But which industries are the worst offenders? This analysis provides insight on this topic.
 \
 \
-**Skills**: 
+**Skills**: Exploratory Data Analysis, SQL query, Statistics, Data Visualization
 \
 \
-**Technologies**: 
+**Technologies**: Python, Pandas, Sqlite3, sql
+
+
+## Motorcycle Part Sale Analysis<br>
+**Project link**: [Click Here](https://github.com/envicdus/Data_Analysis/tree/main/Analyzing%20Motorcycle%20parts%20sale)<br>
+**Full Analysis**: [Click Here](_site\Analyzing Motorcycle parts sale\notebook.html)<br>
 \
 \
-**Results**: 
+**Goal**: to provide a clean dataset from raw data by applying sql querying skill and output a dataset with a format.
 \
 \
-## title<br>
-**Project link**: [Click Here]()<br>
-**Full Analysis**: [Click Here]()<br>
+**Description**: You're working for a company that sells motorcycle parts, and they've asked for some help in analyzing their sales data!
+
+They operate three warehouses in the area, selling both retail and wholesale. They offer a variety of parts and accept credit cards, cash, and bank transfer as payment methods. However, each payment type incurs a different fee.
+
+The board of directors wants to gain a better understanding of wholesale revenue by product line, and how this varies month-to-month and across warehouses. You have been tasked with calculating net revenue for each product line and grouping results by month and warehouse. The results should be filtered so that only "Wholesale" orders are included.
 \
 \
-**Goal**: 
+**Skills**: SQL query
 \
 \
-**Description**: 
+**Technologies**: sqlite3, postgreSQL
+
+
+## Analyzing Student's Mental Health<br>
+**Project link**: [Click Here](https://github.com/envicdus/Data_Analysis/tree/main/Analyzing%20Student's%20mental%20health)<br>
+**Full Analysis**: [Click Here](_site\Analyzing Student's mental health\notebook.html)<br>
 \
 \
-**Skills**: 
+**Goal**: Explore the data using PostgreSQL to find out if you would come to a similar conclusion for international students and see if the length of stay is a contributing factor in mental health decline.
 \
 \
-**Technologies**: 
+**Description**: Does going to university in a different country affect your mental health? A Japanese international university surveyed its students in 2018 and published a study the following year that was approved by several ethical and regulatory boards.
+
+The study found that international students have a higher risk of mental health difficulties than the general population, and that social connectedness (belonging to a social group) and acculturative stress (stress associated with joining a new culture) are predictive of depression.
 \
 \
-**Results**: 
+**Skills**: SQL query
 \
 \
-## title<br>
-**Project link**: [Click Here]()<br>
-**Full Analysis**: [Click Here]()<br>
-\
-\
-**Goal**: 
-\
-\
-**Description**: 
-\
-\
-**Skills**: 
-\
-\
-**Technologies**: 
-\
-\
-**Results**: 
-\
-\
-## title<br>
-**Project link**: [Click Here]()<br>
-**Full Analysis**: [Click Here]()<br>
-\
-\
-**Goal**: 
-\
-\
-**Description**: 
-\
-\
-**Skills**: 
-\
-\
-**Technologies**: 
-\
-\
-**Results**: 
-\
-\
-## title<br>
-**Project link**: [Click Here]()<br>
-**Full Analysis**: [Click Here]()<br>
-\
-\
-**Goal**: 
-\
-\
-**Description**: 
-\
-\
-**Skills**: 
-\
-\
-**Technologies**: 
-\
-\
-**Results**: 
-\
-\
-## title<br>
-**Project link**: [Click Here]()<br>
-**Full Analysis**: [Click Here]()<br>
-\
-\
-**Goal**: 
-\
-\
-**Description**: 
-\
-\
-**Skills**: 
-\
-\
-**Technologies**: 
-\
-\
-**Results**: 
-\
-\
+**Technologies**: sqlite3, postgreSQL
