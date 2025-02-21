@@ -5,9 +5,9 @@ title: "My Portfolio"
 
 
 
-Hi! I am Neil, a Chemist transitioning into Data Analysis with a strong foundation in analytical thinking and problem-solving. With experience in creating dashboards, data visualization, and Python development, I bring a unique blend of scientific expertise and technical skills to data-driven decision-making. I have passed SQL certification exams as well as Data Analyst certification on both DataCamp and HackerRank, demonstrating my proficiency in querying and managing data. Additionally, I have experience teaching college-level subjects, showcasing my ability to communicate complex concepts effectively.
+Hi! I am Neil, a Chemist transitioning into Data Analysis with a strong foundation in analytical thinking and problem-solving. With experience in creating dashboards, data visualization, and Python development, I bring a unique blend of scientific expertise and technical skills to this field. I have passed SQL certification exams as well as Data Analyst certification on both DataCamp and HackerRank, demonstrating my proficiency in querying and managing data. Additionally, I have experience teaching college-level subjects, showcasing my ability to communicate complex concepts effectively.
 
-I am proficient in Python, SQL, and Excel and enjoy building insightful dashboards that turn raw data into actionable intelligence. I also have experience developing Python applications as a hobby, reinforcing my programming and automation skills.
+I am proficient in Python, SQL, and Excel and enjoy building insightful dashboards that turn raw data into actionable insights. I also have experience developing Python applications as a hobby, reinforcing my programming and automation skills.
 
 Beyond my technical abilities, I am passionate about continuous learning and personal growth. I am currently learning German while also learning more about data analysis like making personal projects, further enhancing my adaptability and analytical mindset. I also enjoy reading, jogging, running, and volunteering, which help me stay engaged and balanced.
 
