@@ -6,3 +6,5 @@
 
 # ignore all .qmd files
 *.qmd
+
+_publish.yml

@@ -26,6 +26,7 @@ website:
         href: https://github.com/envicdus/Data_Analysis/tree/main
       - icon: linkedin
         href: https://www.linkedin.com/in/nvddecio/ 
+  page-navigation: true
   back-to-top-navigation: true
 
 
