@@ -12,7 +12,7 @@ website:
     search: true
 
     right:
-      - href: Portfolios.qmd
+      - href: index.qmd
         text: Portfolio
       - href: Trainings.qmd
         text: Trainings
